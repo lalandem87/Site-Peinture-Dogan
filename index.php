@@ -97,6 +97,55 @@
                 <?php } ?>
             </div>
         </section>
+        <section id="apropos">
+            <div class="container-sec">
+                <div class="sec-left">
+                    <div class="title">Pourquoi choisir notre atelier ?</div>
+                    <div class="desc">Forts de plus de 15 ans d'expérience, nous mettons un point d'honneur à réaliser des finitions impeccables tout en respectant vos lieux de vie.</div>
+                    <div class="infos">
+                        <div class="info">
+                            <div class="logo r">
+                                <i class="fa-solid fa-broom"></i>
+                            </div>
+                            <div>
+                                <div class="title">Protection & Nettoyage</div>
+                                <p class="desc">Vos meubles sont protégés et le chantier est nettoyé chaque soir.</p>
+                            </div>
+        
+                        </div>
+                        <div class="info">
+                            <div class="logo g">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div>
+                                <div class="title">Respect des délais</div>
+                                <p class="desc">Nous nous engageons sur une date de fin de chantier stricte.</p>
+                            </div>
+                            
+                        </div>
+                        <div class="info">
+                            <div class="logo b">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <div>
+                                <div class="title">Peintures Ecologiques</div>
+                                <p class="desc">Utilisation de peintures sans solvants nocifs pour un air intérieur sain.</p>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="sec-right">
+                    <div class="img-wraper">
+                        <img src="./backend/images/peinture.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="realisations">
+            <h2>Dernières Réalisations</h2>
+        </section>
     </main>
 </body>
 </html>
