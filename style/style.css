@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,7 +7,7 @@
 }
 
 body {
-  font-family: "Space Grostesk", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 header {
@@ -13,6 +15,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 24px 48px;
+  border-bottom: 1px solid #64748b55;
 }
 
 nav {
@@ -65,4 +68,153 @@ header .tel-devis {
 .btn-devis:hover {
   transform: scale(1.1);
   background-color: #17274d;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 50px 64px;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: bold;
+  max-width: 590px;
+}
+
+h1 .passion {
+  color: #8b5cf6;
+}
+
+h1 .precision {
+  color: #f59e0b;
+}
+
+.hero-desc {
+  font-size: 18px;
+  max-width: 425px;
+  color: #64748b;
+  line-height: 30px;
+}
+
+.hero-left a {
+  font-size: 14px;
+  font-weight: bold;
+  width: fit-content;
+  background-color: #0f172a;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.hero-left a::after {
+  content: "›";
+  margin-left: 8px;
+}
+
+.hero-left a:hover {
+  transform: scale(1.1);
+  background-color: #17274d;
+}
+
+.services {
+  display: flex;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.service .logo {
+  width: fit-content;
+  padding: 10px;
+  border-radius: 16px;
+}
+
+.logo.house {
+  background-color: #f0fdf4;
+}
+
+.logo.house i {
+  color: #166534;
+}
+
+.logo.sun {
+  background-color: #fef2f2;
+}
+
+.logo.sun i {
+  color: #ef4444;
+}
+
+.logo.roller {
+  background-color: #fbf8cc;
+}
+
+.logo.roller i {
+  color: #f59e0b;
+}
+
+.service .title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.service p {
+  color: #64748b;
+  max-width: 126px;
+  font-size: 12px;
+}
+
+.img-wraper {
+  position: relative;
+  width: 100%;
+  height: 800px;
+}
+
+.img-wraper img {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-right .badge {
+  position: absolute;
+  right: 64px;
+  bottom: 64px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 32px;
+}
+
+.badge .logo {
+  color: #fff;
+  background-color: #10b981;
+  padding: 12px;
+  border-radius: 50%;
+}
+
+.badge .title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.badge .infos p {
+  max-width: 190px;
+  color: #64748b;
+  font-size: 12px;
 }
