@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Space Grostesk", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 48px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #64748b;
+}
+
+nav a:hover {
+  border-bottom: 2px solid #17274d;
+}
+
+header .tel-devis {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.tel-devis span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tel-devis span i {
+  color: #8b5cf6;
+}
+
+.tel {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-devis {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  background-color: #0f172a;
+  padding: 12px 24px;
+  border-radius: 20px;
+}
+
+.btn-devis:hover {
+  transform: scale(1.1);
+  background-color: #17274d;
+}
