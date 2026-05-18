@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Dogan</title>
     <link rel="stylesheet" href="./style/style.css">
-    <link href="
-https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css
-" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -29,56 +27,75 @@ https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css
         <section id="accueil">
             <div class="hero-container">
                 <div class="hero-left">
-                <h1>L'art de peindre
-                    vos espaces, avec
-                    <em class="passion">passion</em> et
-                    <em class="precision">précision</em>.
-                </h1>
-                <p class="hero-desc">Interventions rapides, chantiers propres et conseils
-                    couleurs personnalisés pour les particuliers et les
-                    professionnels.
-                </p>
-                <a href="#devis">Parler de mon projet</a>
-                <div class="services">
-                    <div class="service">
-                        <div class="logo house">
-                            <i class="fa-regular fa-house"></i>
+                    <h1>
+                        L'art de peindre vos espaces, avec
+                        <em class="passion">passion</em> et
+                        <em class="precision">précision</em>.
+                    </h1>
+                    <p class="hero-desc">
+                        Interventions rapides, chantiers propres et conseils
+                        couleurs personnalisés pour les particuliers et les professionnels.
+                    </p>
+                    <a href="#devis">Parler de mon projet</a>
+                    <div class="services">
+                        <div class="service">
+                            <div class="logo house">
+                                <i class="fa-regular fa-house"></i>
+                            </div>
+                            <div class="title">Intérieur</div>
+                            <p class="desc">Murs, plafonds, boiseries.</p>
                         </div>
-                        <div class="title">Intérieur</div>
-                        <p class="desc">Murs, plafonds, boiseries.</p>
+                        <div class="service">
+                            <div class="logo sun">
+                                <i class="fa-solid fa-sun"></i>
+                            </div>
+                            <div class="title">Extérieur</div>
+                            <p class="desc">Façades, volets, portails.</p>
+                        </div>
+                        <div class="service">
+                            <div class="logo roller">
+                                <i class="fa-solid fa-paint-roller"></i>
+                            </div>
+                            <div class="title">Décoration</div>
+                            <p class="desc">Papiers peints, effets.</p>
+                        </div>
                     </div>
-                    <div class="service">
-                        <div class="logo sun">
-                            <i class="fa-solid fa-sun"></i>
+                </div>
+                <div class="hero-right">
+                    <div class="img-wraper">
+                        <img src="./backend/images/hero-image.png" alt="image-hero">
+                        <div class="badge">
+                            <div class="logo">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="infos">
+                                <div class="title">Artisan Certifié</div>
+                                <p>Garantie décennale sur tous nos travaux.</p>
+                            </div>
                         </div>
-                        <div class="title">Extérieur</div>
-                        <p class="desc">Façades, volets, portails.</p>
-                    </div>
-                    <div class="service">
-                        <div class="logo roller">
-                            <i class="fa-solid fa-paint-roller"></i>
-                        </div>
-                        <div class="title">Décoration</div>
-                        <p class="desc">Papiers peints, effets.</p>
                     </div>
                 </div>
             </div>
-            <div class="hero-right">
-                <div class="img-wraper">
-                    <img src="./backend/images/hero-image.png" alt="image-hero">
-                    <div class="badge">
-                        <div class="logo">
-                            <i class="fa-solid fa-star"></i>
-                        </div>
+        </section>
+        <section id="prestation">
+            <h2>Nos Prestations</h2>
+            <p class="sec-desc">Nous vous accompagnons dans tous vos projets de rénovation et de décoration, en intérieur comme en extérieur.</p>
+            <div class="container-card">
+                <?php
+                    $json = file_get_contents("./backend/data.json");
+                    $data = json_decode($json, true);
+                    foreach ($data["prestations"] as $service) {
+                ?>
+                    <div class="card">
+                        <img src="<?= $service["image"] ?>" alt="<?= $service["name"] ?>">
                         <div class="infos">
-                            <div class="title">Artisan Certifié</div>
-                            <p>Garantie décennale sur tous nos travaux.</p>
+                            <h3><?= $service["name"] ?></h3>
+                            <p><?= $service["desc"] ?></p>
+                            <a class="<?=$service["class"] ?>" href="#devis"><?= $service["lien"] ?></a>
                         </div>
                     </div>
-                </div>
+                <?php } ?>
             </div>
-            </div>
-            
         </section>
     </main>
 </body>
