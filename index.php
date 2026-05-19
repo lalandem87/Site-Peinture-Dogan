@@ -63,7 +63,7 @@
                 </div>
                 <div class="hero-right">
                     <div class="img-wraper">
-                        <img src="./backend/images/hero-image.png" alt="image-hero">
+                        <img src="./backend/images/hero-image.webp" alt="image-hero">
                         <div class="badge">
                             <div class="logo">
                                 <i class="fa-solid fa-star"></i>
@@ -138,14 +138,35 @@
                 </div>
                 <div class="sec-right">
                     <div class="img-wraper">
-                        <img src="./backend/images/peinture.png" alt="">
+                        <img src="./backend/images/peinture.webp" alt="">
                     </div>
                 </div>
             </div>
         </section>
         <section id="realisations">
             <h2>Dernières Réalisations</h2>
+            <div>
+                <div class="sec-desc">Découvrez la qualité de nos finitions à travers nos récents chantiers.</div>
+            </div>
+            <div class="container-slider">
+                <div class="sliders">
+                    <?php 
+                        foreach($data["realisations"] as $rea){
+                    ?>
+                        <div class="slider">
+                            <img src="<?=$rea["image"] ?>" alt="Image travaux réalisé">
+                        </div>
+                    <?php } ?>
+                    
+                </div>
+                <div class="btn-slider">
+                    <a class="btn-previous" href=""><i class="fa-solid fa-angle-left"></i></a>
+                    <a class="btn-next" href=""><i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </div>
+            
         </section>
     </main>
+    <script src="./script/carrousel.js"></script>
 </body>
 </html>

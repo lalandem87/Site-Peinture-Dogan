@@ -389,6 +389,58 @@ h3 {
   padding: 96px 80px;
 }
 
-#realisations h2 {
-  text-align: start;
+.container-slider {
+  position: relative;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.sliders {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.4s ease;
+}
+
+.slider {
+  height: 305px;
+  width: calc(33.33% - 16px);
+  flex-shrink: 0;
+}
+
+.slider img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.btn-slider {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  top: 50%;
+  width: 100%;
+  padding: 0 16px;
+  pointer-events: none;
+}
+
+.btn-previous,
+.btn-next {
+  width: 48px;
+  height: 48px;
+  background: #1a1a2e;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  pointer-events: all;
+}
+.btn-previous:hover,
+.btn-next:hover {
+  background: #2d2d5a;
+  transform: scale(1.08);
 }

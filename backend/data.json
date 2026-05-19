@@ -2,26 +2,42 @@
   "prestations": [
     {
       "name": "Peinture Intérieure",
-      "image": "./backend/images/interieur.png",
+      "image": "./backend/images/interieur.webp",
       "desc": "Mise en peinture de vos murs, plafonds et boiseries avec des finitions mates, velours ou satinées de haute qualité.",
       "lien": "En savoir plus<i class='fa-solid fa-arrow-right'></i>",
       "class": "a"
     },
     {
       "name": "Façades & Extérieurs",
-      "image": "./backend/images/exterieur.png",
+      "image": "./backend/images/exterieur.webp",
       "desc": "Ravalement de façade, traitement anti-mousse, et peinture de vos menuiseries extérieures (volets, portails).",
       "lien": "En savoir plus<i class='fa-solid fa-arrow-right'></i>",
       "class": "b"
     },
     {
       "name": "Décoration & Revêtements",
-      "image": "./backend/images/decoration.png",
+      "image": "./backend/images/decoration.webp",
       "desc": "Pose de papiers peints panoramiques, toiles de verre, et application d'enduits décoratifs (stuc, béton ciré).",
       "lien": "En savoir plus<i class='fa-solid fa-arrow-right'></i>",
       "class": "c"
     }
   ],
 
-  "realisations": []
+  "realisations": [
+    {
+      "image": "./backend/images/IMG_0846.webp"
+    },
+    {
+      "image": "./backend/images/IMG_1012.webp"
+    },
+    {
+      "image": "./backend/images/IMG_1778.webp"
+    },
+    {
+      "image": "./backend/images/IMG_0797.webp"
+    },
+    {
+      "image": "./backend/images/IMG_6056.webp"
+    }
+  ]
 }
