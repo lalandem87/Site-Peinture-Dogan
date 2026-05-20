@@ -9,8 +9,8 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="" alt="logo entreprise">
+        <div class="main-logo">
+            <img src="./backend/images/logo.webp" alt="logo entreprise">
         </div>
         <nav>
             <a href="#accueil">Accueil</a>
@@ -19,7 +19,7 @@
             <a href="#avis">Avis</a>
         </nav>
         <div class="tel-devis">
-            <span class="tel"><i class="fa-solid fa-phone"></i>01 23 45 67 89</span>
+            <span class="tel"><i class="fa-solid fa-phone"></i>06 02 66 15 68</span>
             <a class="btn-devis" href="#devis">Demander un devis</a>
         </div>
     </header>
@@ -165,6 +165,77 @@
                 </div>
             </div>
             
+        </section>
+        <section id="devis">
+            <div class="container-form">
+                <div class="form-left">
+                    <h2>Parlez-nous de votre projet</h2>
+                    <p class="sec-desc">Remplissez ce formulaire pour obtenir un devis gratuit. Notre équipe vous recontactera sous 48h avec une proposition adaptée.</p>
+                    <div class="infos">
+                        <div class="info">
+                            <div class="logo x">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="details">
+                                <div>Appelez-nous</div>
+                                <p>06 02 66 15 68</p>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="logo y">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div class="details">
+                                <div>Ecrivez-nous</div>
+                                <p>Glkolors.artisan@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="logo z">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="details">
+                                <div>Notre Atelier</div>
+                                <p>47 chemins des fonts saladas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-right">
+                    <h3>Demande de Devis Gratuit</h3>
+                    <form action="" method="POST">
+                        <div class="rows">
+                            <div class="row">
+                                <label for="name">Nom & Prénom</label>
+                                <input id="name" name="name" type="text" placeholder="Jean Dupont">
+                            </div>
+                            <div class="row">
+                                <label for="tel">Téléphone</label>
+                                <input id="tel" name="tel" type="phone" placeholder="06 XX XX XX XX">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="mail">Adresse Email</label>
+                            <input id="mail" name="mail" type="email" placeholder="jean.dupont@gmail.com">
+                        </div>
+                        <div class="row">
+                            <label for="type">Type de travaux</label>
+                            <select name="type" id="type">
+                                <option value="">Sélectionnez une prestation</option>
+                                <option value="">Intérieur</option>
+                                <option value="">Extérieur</option>
+                                <option value="">Décoration</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <label for="msg">Détails du projet</label>
+                            <textarea name="msg" id="msg" placeholder="Décrivez brièvement les pièces à peindre, la surface approximative, l'état des murs..."></textarea>
+                        </div>
+                        <button type="submit">Envoyer ma demande</button>
+                        <p>Vos données sont protégées et ne seront utilisées que pour répondre à votre demande.</p>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
     <script src="./script/carrousel.js"></script>
