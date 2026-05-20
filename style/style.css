@@ -639,3 +639,56 @@ form p {
   max-width: 510px;
   margin: 0 auto;
 }
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 48px 64px;
+}
+
+footer .f-left {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .f-left .sec-desc {
+  font-size: 14px;
+  text-align: start;
+  margin: 0;
+  max-width: 250px;
+}
+
+footer .f-right {
+  display: flex;
+  gap: 64px;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+footer .f-right ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+footer .f-right li,
+a {
+  list-style: none;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+footer .f-right li a {
+  text-decoration: none;
+}
+
+footer .f-right li a:hover {
+  text-decoration: underline;
+}

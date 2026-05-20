@@ -238,6 +238,41 @@
             </div>
         </section>
     </main>
+    <footer>
+        <div class="f-left">
+            <div class="main-logo">
+                <img src="./backend/images/logo.webp" alt="logo entreprise">
+            </div>
+            <div class="sec-desc">Votre artisan peintre de confiance pour tous vos projets de rénovation.</div>
+        </div>
+        <div class="f-right">
+            <div>
+                <h4>Services</h4>
+                <ul>
+                    <li>Peinture Intérieure</li>
+                    <li>Ravalement de façade</li>
+                    <li>Pose de papier peint</li>
+                    <li>Revêtements de sol</li>
+                </ul>
+            </div>
+            <div>
+                <h4>L'entreprise</h4>
+                <ul>
+                    <li><a href="#realisations">Nos réalisations</a></li>
+                    <li><a href="#avis">Avis clients</a></li>
+                    <li><a href="#devis">Demander un devis</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li>06 02 66 15 68</li>
+                    <li><a href="mailto:Glkolors.artisan@gmail.com">Glkolors.artisan@gmail.com</a></li>
+                    <li>47 chemin des fonts saladas</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
     <script src="./script/carrousel.js"></script>
 </body>
 </html>
