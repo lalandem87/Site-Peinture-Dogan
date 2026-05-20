@@ -196,7 +196,7 @@
                             </div>
                             <div class="details">
                                 <div>Notre Atelier</div>
-                                <p>47 chemins des fonts saladas</p>
+                                <p>47 chemins des fonts saladas, 87100 Limoges</p>
                             </div>
                         </div>
                     </div>
