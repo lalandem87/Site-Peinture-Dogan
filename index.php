@@ -3,7 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Dogan</title>
+    <meta name="description" content="GLKolors, artisan peintre à limoges. Peinture intérieure, extérieure et décoration. Devis gratuit.">
+    <meta name="keywords" content="peintre, artisan, peinture intérieure, façade, décoration, limoges">
+    <meta name="author" content="GLKolors">
+    <!-- Open Graph (partage Facebook/LinkedIn) -->
+    <meta property="og:title" content="GL Kolors - Artisan Peintre">
+    <meta property="og:description" content="Peinture intérieure, extérieure et décoration.">
+    <meta property="og:image" content="./backend/images/hero-image.webp">
+    <meta property="og:url" content="https://tonsite.fr">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GLKolors - Artisan Peintre">
+    <meta name="twitter:description" content="Peinture intérieure, extérieure et décoration.">
+    <title>Glkolors</title>
     <link rel="stylesheet" href="./style/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
 </head>
@@ -54,7 +67,7 @@
                 </div>
                 <div class="hero-right">
                     <div class="img-wraper">
-                        <img src="./backend/images/unsplash.jpg" alt="image-hero">
+                        <img src="./backend/images/unsplash.webp" alt="image-hero">
                         <div class="badge">
                             <div class="logo">
                                 <i class="fa-solid fa-star"></i>
@@ -72,8 +85,9 @@
             <div class="container-apropos">
                 <div class="sec-left">
                     <h2>Notre Histoire</h2>
-                    <p class="sec-desc">Atelier Couleurs est une entreprise familiale née de la passion pour la décoration et l'aménagement d'intérieur. Depuis 3 générations, nous transmettons notre savoir-faire avec la même exigence de qualité.</p>
-                    <p class="sec-desc">Notre équipe à taille humaine vous accompagne de la conception à la réalisation de votre projet, en vous garantissant un interlocuteur unique et un suivi personnalisé pour tous vos travaux de rénovation.</p>
+                    <div class="divider"></div>
+                    <p class="sec-desc">Chez Glkolors, nous mettons notre savoir-faire et notre créativité au service de vos projets depuis plus de 5 ans. Spécialisés dans les travaux de peinture intérieure et extérieure, nous associons les techniques les plus modernes à des idées fraîches et tendances pour transformer chaque espace en un lieu unique.</p>
+                    <p class="sec-desc">Notre objectif : offrir des finitions soignées, durables et élégantes, adaptées à vos envies et à votre style. Que ce soit pour une rénovation, une décoration contemporaine ou un projet neuf, nous travaillons avec passion, précision et des matériaux de qualité afin de garantir un résultat à la hauteur de vos attentes.</p>
                 </div>
                 <div class="img-wraper">
                     <img src="./backend/images/unsplash2.jpg" alt="Image section apropos">
@@ -163,8 +177,8 @@
                     
                 </div>
                 <div class="btn-slider">
-                    <a class="btn-previous" href=""><i class="fa-solid fa-angle-left"></i></a>
-                    <a class="btn-next" href=""><i class="fa-solid fa-angle-right"></i></a>
+                    <button class="btn-previous" aria-label="bouton-precedant"><i class="fa-solid fa-angle-left"></i></button>
+                    <button class="btn-next" aria-label="bouton-suivant"><i class="fa-solid fa-angle-right"></i></button>
                 </div>
             </div>
         </section>

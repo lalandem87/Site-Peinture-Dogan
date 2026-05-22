@@ -55,7 +55,7 @@ header .tel-devis {
 }
 
 .tel {
-  color: #00aaee;
+  color: #00597c;
   font-size: 14px;
   font-weight: bold;
 }
@@ -99,7 +99,7 @@ h1 {
 }
 
 h1 .passion {
-  color: #0099ff;
+  color: #0070ba;
 }
 
 h1 .precision {
@@ -228,6 +228,16 @@ h1 .precision {
   display: flex;
 }
 
+.container-apropos h2 {
+  margin-bottom: 0;
+}
+
+.container-apropos .divider {
+  height: 4px;
+  width: 64px;
+  background-color: #f59e0b;
+}
+
 .container-apropos .sec-left {
   display: flex;
   flex-direction: column;
@@ -319,15 +329,15 @@ h3 {
 }
 
 .container-card .card .infos a.a {
-  color: #8b5cf6;
+  color: #0077cc;
 }
 
 .container-card .card .infos a.b {
-  color: #f59e0b;
+  color: #956300;
 }
 
 .container-card .card .infos a.c {
-  color: #10b981;
+  color: #aa0088;
 }
 
 #apropos-atelier,
@@ -450,7 +460,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   transform: translateY(-50%);
-  top: 50%;
+  top: 54%;
   width: 100%;
   padding: 0 16px;
   pointer-events: none;
@@ -458,21 +468,18 @@ h3 {
 
 .btn-previous,
 .btn-next {
+  font-size: 30px;
   width: 48px;
   height: 48px;
-  background: #1a1a2e;
   color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: 0;
+  background-color: transparent;
   transition: all 0.2s ease;
   cursor: pointer;
   pointer-events: all;
 }
 .btn-previous:hover,
 .btn-next:hover {
-  background: #2d2d5a;
   transform: scale(1.08);
 }
 
@@ -483,6 +490,7 @@ h3 {
   justify-content: center;
   align-items: center;
   margin-bottom: 15px;
+  font-size: 20px;
 }
 
 .stars i {
