@@ -36,34 +36,25 @@
                         Interventions rapides, chantiers propres et conseils
                         couleurs personnalisés pour les particuliers et les professionnels.
                     </p>
-                    <a href="#devis">Parler de mon projet</a>
+                    <a href="#devis">Parler de mon projet <i class="fa-solid fa-angle-right"></i></a>
                     <div class="services">
                         <div class="service">
-                            <div class="logo house">
-                                <i class="fa-regular fa-house"></i>
-                            </div>
-                            <div class="title">Intérieur</div>
-                            <p class="desc">Murs, plafonds, boiseries.</p>
+                            <div class="chiffre">5+</div>
+                            <div class="title">Ans d'expérience</div>
                         </div>
                         <div class="service">
-                            <div class="logo sun">
-                                <i class="fa-solid fa-sun"></i>
-                            </div>
-                            <div class="title">Extérieur</div>
-                            <p class="desc">Façades, volets, portails.</p>
+                            <div class="chiffre">200+</div>
+                            <div class="title">Chantiers réalisés</div>
                         </div>
                         <div class="service">
-                            <div class="logo roller">
-                                <i class="fa-solid fa-paint-roller"></i>
-                            </div>
-                            <div class="title">Décoration</div>
-                            <p class="desc">Papiers peints, effets.</p>
+                            <div class="chiffre">99%</div>
+                            <div class="title">Clients satisfaits</div>
                         </div>
                     </div>
                 </div>
                 <div class="hero-right">
                     <div class="img-wraper">
-                        <img src="./backend/images/hero-image.webp" alt="image-hero">
+                        <img src="./backend/images/unsplash.jpg" alt="image-hero">
                         <div class="badge">
                             <div class="logo">
                                 <i class="fa-solid fa-star"></i>
@@ -74,6 +65,18 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section id="apropos">
+            <div class="container-apropos">
+                <div class="sec-left">
+                    <h2>Notre Histoire</h2>
+                    <p class="sec-desc">Atelier Couleurs est une entreprise familiale née de la passion pour la décoration et l'aménagement d'intérieur. Depuis 3 générations, nous transmettons notre savoir-faire avec la même exigence de qualité.</p>
+                    <p class="sec-desc">Notre équipe à taille humaine vous accompagne de la conception à la réalisation de votre projet, en vous garantissant un interlocuteur unique et un suivi personnalisé pour tous vos travaux de rénovation.</p>
+                </div>
+                <div class="img-wraper">
+                    <img src="./backend/images/unsplash2.jpg" alt="Image section apropos">
                 </div>
             </div>
         </section>
@@ -97,11 +100,11 @@
                 <?php } ?>
             </div>
         </section>
-        <section id="apropos">
+        <section id="apropos-atelier">
             <div class="container-sec">
                 <div class="sec-left">
-                    <div class="title">Pourquoi choisir notre atelier ?</div>
-                    <div class="desc">Forts de plus de 15 ans d'expérience, nous mettons un point d'honneur à réaliser des finitions impeccables tout en respectant vos lieux de vie.</div>
+                    <div class="title">Pourquoi choisir Glkolors ?</div>
+                    <div class="desc">Forts de plus de 5 ans d'expérience, nous mettons un point d'honneur à réaliser des finitions impeccables tout en respectant vos lieux de vie.</div>
                     <div class="infos">
                         <div class="info">
                             <div class="logo r">
@@ -273,6 +276,7 @@
             </div>
         </div>
     </footer>
+    <script src="./script/main.js"></script>
     <script src="./script/carrousel.js"></script>
 </body>
 </html>

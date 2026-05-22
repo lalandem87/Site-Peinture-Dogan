@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 
 * {
   box-sizing: border-box;
@@ -15,7 +16,8 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 24px 48px;
-  max-height: 10vh;
+  height: 10vh;
+  border-bottom: 1px solid #64748b2f;
 }
 .main-logo {
   height: 90px;
@@ -52,11 +54,8 @@ header .tel-devis {
   gap: 5px;
 }
 
-.tel-devis span i {
-  color: #8b5cf6;
-}
-
 .tel {
+  color: #00aaee;
   font-size: 14px;
   font-weight: bold;
 }
@@ -81,6 +80,7 @@ form button:hover {
 /* HERO */
 
 .hero-container {
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -99,11 +99,11 @@ h1 {
 }
 
 h1 .passion {
-  color: #8b5cf6;
+  color: #0099ff;
 }
 
 h1 .precision {
-  color: #f59e0b;
+  color: #a2006c;
 }
 
 .hero-desc {
@@ -114,7 +114,11 @@ h1 .precision {
 }
 
 .hero-left a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-size: 14px;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: bold;
   width: fit-content;
   background-color: #0f172a;
@@ -125,15 +129,12 @@ h1 .precision {
   margin-top: 15px;
 }
 
-.hero-left a::after {
-  content: "›";
-  margin-left: 8px;
-}
-
 .services {
   display: flex;
   gap: 32px;
   margin-top: 40px;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 24px;
 }
 
 .service {
@@ -142,34 +143,24 @@ h1 .precision {
   gap: 16px;
 }
 
-.service .logo {
-  width: fit-content;
-  padding: 10px;
-  border-radius: 16px;
+.service:not(:last-child) {
+  padding-right: 32px;
+  border-right: 1px solid #e2e8f0;
 }
 
-.logo.house {
-  background-color: #f0fdf4;
+.chiffre {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1;
 }
 
-.logo.house i {
-  color: #166534;
-}
-
-.logo.sun {
-  background-color: #fef2f2;
-}
-
-.logo.sun i {
-  color: #ef4444;
-}
-
-.logo.roller {
-  background-color: #fbf8cc;
-}
-
-.logo.roller i {
-  color: #f59e0b;
+.service .title {
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .service .title {
@@ -186,12 +177,13 @@ h1 .precision {
 .img-wraper {
   position: relative;
   width: 100%;
-  height: 800px;
+  height: 815px;
 }
 
 .img-wraper img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .hero-right .badge {
@@ -222,6 +214,43 @@ h1 .precision {
   max-width: 190px;
   color: #64748b;
   font-size: 12px;
+}
+
+/* APROPOS */
+
+#apropos {
+  padding: 96px 80px;
+}
+
+.container-apropos {
+  display: flex;
+}
+
+.container-apropos .sec-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.container-apropos .sec-left h2 {
+  text-align: start;
+}
+
+.container-apropos .sec-left p {
+  text-align: start;
+  max-width: 100%;
+  line-height: 30px;
+}
+
+.container-apropos .img-wraper {
+  width: 100%;
+  height: 450px;
+}
+
+.container-apropos .img-wraper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* PRESTATIONS */
@@ -303,6 +332,7 @@ h3 {
   color: #10b981;
 }
 
+#apropos-atelier,
 #apropos {
   background-color: #f1f5f949;
 }
