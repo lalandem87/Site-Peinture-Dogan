@@ -218,7 +218,9 @@ h1 .precision {
 
 /* APROPOS */
 
-#apropos {
+#apropos,
+#avis,
+#prestation {
   padding: 96px 80px;
 }
 
@@ -268,10 +270,6 @@ h2 {
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
-}
-
-#prestation {
-  padding: 96px 80px;
 }
 
 .container-card {
@@ -476,6 +474,55 @@ h3 {
 .btn-next:hover {
   background: #2d2d5a;
   transform: scale(1.08);
+}
+
+/* AVIS */
+
+.stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.stars i {
+  color: #f59e0b;
+}
+
+.container-card-avis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 64px;
+}
+
+.container-card-avis .card-avis {
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 32px;
+  background-color: #f1f5f938;
+}
+
+.container-card-avis .card-avis .infos {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.container-card-avis .card-avis .avis-person {
+  color: #0f172a;
+  font-weight: bold;
+}
+
+.container-card-avis .card-avis .date-avis {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.container-card-avis .card-avis p {
+  max-width: 340px;
+  color: #64748b;
 }
 
 /* DEVIS */

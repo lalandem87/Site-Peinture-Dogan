@@ -167,7 +167,35 @@
                     <a class="btn-next" href=""><i class="fa-solid fa-angle-right"></i></a>
                 </div>
             </div>
-            
+        </section>
+        <section id="avis">
+            <h2>Avis Clients</h2>
+            <div class="stars">
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <p class="sec-desc">Note moyenne de 4.9/5 sur plus de 120 avis clients</p>
+            <div class="container-card-avis">
+                <?php 
+                    $avis = $data["avis"];
+                    foreach($avis as $avi){?>
+                        <div class="card-avis">
+                            <div class="infos">
+                                <div class="img-avis">
+                                    <img src="<?= $avi["image"] ?>" alt="Photo personne déposant l'avis">
+                                </div>
+                                <div class="info">
+                                    <div class="avis-person"><?= $avi["name"] ?></div>
+                                    <div class="date-avis"><?= $avi["date"] ?></div>
+                                </div>
+                            </div>
+                            <p><?= $avi["message"] ?></p>
+                        </div>
+                    <?php } ?>
+            </div>
         </section>
         <section id="devis">
             <div class="container-form">
