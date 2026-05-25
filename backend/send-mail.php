@@ -1,0 +1,43 @@
+<?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require './PHPMailer/Exception.php';
+require './PHPMailer/PHPMailer.php';
+require './PHPMailer/SMTP.php';
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') exit;
+
+$name = htmlspecialchars($_POST['name']);
+$phone = htmlspecialchars($_POST['tel']);
+$email = filter_var($_POST['mail'], FILTER_SANITIZE_EMAIL);
+$type_travaux = htmlspecialchars($_POST['type']);
+$message = htmlspecialchars($_POST['msg']);
+
+$mail = new PHPMailer(true);
+
+try {
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.gmail.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'Glkolors.artisan@gmail.com';
+    $mail->Password   = 'ton_app_password';
+    $mail->SMTPSecure = 'tls';
+    $mail->Port       = 587;
+
+    $mail->setFrom($email, $name);
+    $mail->addAddress('Glkolors.artisan@gmail.com', 'Glkolors');
+
+    $mail->isHTML(false);
+    $mail->Subject = "Nouvelle demande de devis - " . $type_travaux;
+    $mail->Body    = "Nom : $name\nTéléphone : $phone\nEmail : $email\nType de travaux : $type_travaux\nMessage : $message";
+
+    if (!$mail->send()) {
+        echo 'Le message n\'a pas pu être envoyé. Erreur : ' . $mail->ErrorInfo;
+    } else {
+        echo 'Le message a été envoyé';
+    }
+} catch (Exception $e) {
+    echo 'Erreur : ' . $e->getMessage();
+}

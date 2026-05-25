@@ -26,9 +26,10 @@
             <img src="./backend/images/logo.webp" alt="logo entreprise">
         </div>
         <nav>
-            <a href="#accueil">Accueil</a>
-            <a href="#realisations">Réalisations</a>
-            <a href="#prestations">Prestations</a>
+            <a href="#accueil" id="nav-link-home">Accueil</a>
+            <a href="#apropos">A propos</a>
+            <a href="#realisations">Prestations</a>
+            <a href="#prestations">Réalisations</a>
             <a href="#avis">Avis</a>
         </nav>
         <div class="tel-devis">
@@ -90,11 +91,11 @@
                     <p class="sec-desc">Notre objectif : offrir des finitions soignées, durables et élégantes, adaptées à vos envies et à votre style. Que ce soit pour une rénovation, une décoration contemporaine ou un projet neuf, nous travaillons avec passion, précision et des matériaux de qualité afin de garantir un résultat à la hauteur de vos attentes.</p>
                 </div>
                 <div class="img-wraper">
-                    <img src="./backend/images/unsplash2.jpg" alt="Image section apropos">
+                    <img src="./backend/images/notre-histoire.webp" alt="Image section apropos">
                 </div>
             </div>
         </section>
-        <section id="prestation">
+        <section id="prestations">
             <h2>Nos Prestations</h2>
             <p class="sec-desc">Nous vous accompagnons dans tous vos projets de rénovation et de décoration, en intérieur comme en extérieur.</p>
             <div class="container-card">
@@ -155,7 +156,7 @@
                 </div>
                 <div class="sec-right">
                     <div class="img-wraper">
-                        <img src="./backend/images/peinture.webp" alt="">
+                        <img src="./backend/images/apropos-atelier.webp" alt="">
                     </div>
                 </div>
             </div>
@@ -248,7 +249,7 @@
                 </div>
                 <div class="form-right">
                     <h3>Demande de Devis Gratuit</h3>
-                    <form action="" method="POST">
+                    <form action="" method="post">
                         <div class="rows">
                             <div class="row">
                                 <label for="name">Nom & Prénom</label>
