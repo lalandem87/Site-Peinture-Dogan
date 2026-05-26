@@ -156,16 +156,11 @@ h1 .precision {
 }
 
 .service .title {
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: bold;
   color: #64748b;
   text-transform: uppercase;
   letter-spacing: 1px;
-}
-
-.service .title {
-  font-size: 14px;
-  font-weight: bold;
 }
 
 .service p {
@@ -831,4 +826,54 @@ footer .main-logo {
     border-bottom-left-radius: 0;
   }
 
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  header {
+    padding: 16px 24px;
+  }
+
+  header .tel-devis {
+    display: none;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .hero-left {
+    padding: 48px 24px 32px 24px;
+  }
+
+  .hero-left a {
+    width: 100%;
+    padding: 16px 24px;
+    justify-content: center;
+  }
+
+  .chiffre {
+    font-size: 30px;
+  }
+
+  .service .title {
+    font-size: 12px;
+  }
+
+  .hero-right .img-wraper {
+    height: 350px;
+  }
+
+  .hero-right .badge {
+    right: 25px;
+    bottom: -50px;
+    padding: 16px;
+  }
+
+  .badge .infos p {
+    max-width: 125px;
+  }
 }
