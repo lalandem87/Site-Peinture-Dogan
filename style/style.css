@@ -859,6 +859,10 @@ footer .main-logo {
     justify-content: center;
   }
 
+  .services {
+    gap: 20px;
+  }
+
   .service:not(:last-child) {
     padding-right: 15px;
   }
@@ -890,14 +894,42 @@ footer .main-logo {
     display: flex;
     flex-direction: column;
     padding: 64px 0;
+    gap: 24px;
   }
 
-  #prestations {
+  #prestations, .container-sec, #realisations, #avis, #devis {
     padding: 64px 24px;
   }
 
-  .container-card {
+  .container-card .card .infos {
+    padding: 24px;
+  }
+
+  .container-card, .container-card-avis {
     grid-template-columns: 1fr;
     margin-top: 40px;
   }
+
+  .container-sec {
+    grid-template-columns: 1fr;
+  }
+
+  .container-sec .sec-left {
+    margin: 0;
+  }
+
+  .container-slider {
+    border-radius: 16px;
+  }
+
+  .slider {
+    width: 100%;
+    border-radius: 16px;
+  }
+
+
+  .btn-slider {
+    padding: 0;
+  }
+
 }

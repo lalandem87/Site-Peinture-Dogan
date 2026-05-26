@@ -2,10 +2,10 @@ const sliders = document.querySelector(".sliders");
 const btnNext = document.querySelector(".btn-next");
 const btnPrev = document.querySelector(".btn-previous");
 
-const slideWidth = sliders.querySelector(".slider").offsetWidth + 24;
 let current = 0;
-const total = document.querySelectorAll(".slider").length;
-const visible = 3;
+let slideWidth = sliders.querySelector(".slider").offsetWidth + 24;
+let total = document.querySelectorAll(".slider").length;
+let visible = window.innerWidth < 768 ? 1 : 3;
 
 btnNext.addEventListener("click", (e) => {
   e.preventDefault();
@@ -21,4 +21,11 @@ btnPrev.addEventListener("click", (e) => {
     current--;
     sliders.style.transform = `translateX(-${current * slideWidth}px)`;
   }
+});
+
+window.addEventListener('resize', () => {
+  current = 0;
+  slideWidth = sliders.querySelector(".slider").offsetWidth + 24;
+  visible = window.innerWidth < 768 ? 1 : 3;
+  sliders.style.transform = 'translateX(0)';
 });
