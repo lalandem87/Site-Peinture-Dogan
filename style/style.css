@@ -9,6 +9,8 @@
 
 body {
   font-family: "Space Grotesk", sans-serif;
+  max-width: 100vw;
+  height: 100vh;
 }
 
 header {
@@ -730,8 +732,17 @@ form p {
 
 footer {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 24px;
   padding: 48px 64px;
+  background-color: #0F172A;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ffffff44;
+  padding-bottom: 35px;
 }
 
 footer .f-left {
@@ -744,6 +755,7 @@ footer .f-left .sec-desc {
   text-align: start;
   margin: 0;
   max-width: 250px;
+  color: #fff;
 }
 
 footer .f-right {
@@ -755,6 +767,9 @@ h4 {
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 20px;
+  color: #ffffff7d;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 footer .f-right ul {
@@ -766,7 +781,7 @@ footer .f-right ul {
 footer .f-right li,
 a {
   list-style: none;
-  color: #64748b;
+  color: #fff;
   font-size: 14px;
   font-weight: 500;
 }
@@ -782,6 +797,12 @@ footer .f-right li a:hover {
 footer .main-logo {
   margin-bottom: 18px;
 }
+
+ .footer-bottom {
+    font-size: 12px;
+    color: #ffffff70;
+    text-align: center;
+  }
 
 @media (max-width: 1024px) {
 
@@ -927,9 +948,32 @@ footer .main-logo {
     border-radius: 16px;
   }
 
+  .container-form .form-left .sec-desc {
+    font-size: 16px;
+  }
 
-  .btn-slider {
-    padding: 0;
+  .container-form .form-right form .rows {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .container-form .form-left, .form-right {
+    padding: 64px 24px;
+  }
+
+  footer {
+    padding: 40px 24px;
+  }
+
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  footer .f-right {
+    flex-direction: column;
+    gap: 24px;
   }
 
 }

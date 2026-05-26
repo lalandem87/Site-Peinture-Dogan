@@ -285,7 +285,8 @@
         </section>
     </main>
     <footer>
-        <div class="f-left">
+        <div class="footer-top">
+            <div class="f-left">
             <div class="main-logo">
                 <img src="./backend/images/logo-rec.webp" alt="logo entreprise">
             </div>
@@ -317,6 +318,10 @@
                     <li>47 chemin des fonts saladas</li>
                 </ul>
             </div>
+        </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 Glkolors. Tous droits réservés.
         </div>
     </footer>
     <script src="./script/main.js"></script>
