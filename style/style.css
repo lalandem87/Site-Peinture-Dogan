@@ -845,6 +845,10 @@ footer .main-logo {
     font-size: 48px;
   }
 
+  h2 {
+    font-size: 32px;
+  }
+
   .hero-left {
     padding: 48px 24px 32px 24px;
   }
@@ -853,6 +857,10 @@ footer .main-logo {
     width: 100%;
     padding: 16px 24px;
     justify-content: center;
+  }
+
+  .service:not(:last-child) {
+    padding-right: 15px;
   }
 
   .chiffre {
@@ -875,5 +883,21 @@ footer .main-logo {
 
   .badge .infos p {
     max-width: 125px;
+  }
+
+  .container-apropos {
+    max-width: 325px;
+    display: flex;
+    flex-direction: column;
+    padding: 64px 0;
+  }
+
+  #prestations {
+    padding: 64px 24px;
+  }
+
+  .container-card {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
   }
 }
