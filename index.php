@@ -23,7 +23,7 @@
 <body>
     <header>
         <div class="main-logo">
-            <img src="./backend/images/logo.webp" alt="logo entreprise">
+            <img src="./backend/images/logo-rec.webp" alt="logo entreprise">
         </div>
         <nav>
             <a href="#accueil" id="nav-link-home">Accueil</a>
@@ -287,7 +287,7 @@
     <footer>
         <div class="f-left">
             <div class="main-logo">
-                <img src="./backend/images/logo.webp" alt="logo entreprise">
+                <img src="./backend/images/logo-rec.webp" alt="logo entreprise">
             </div>
             <div class="sec-desc">Votre artisan peintre de confiance pour tous vos projets de rénovation.</div>
         </div>

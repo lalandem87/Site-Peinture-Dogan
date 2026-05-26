@@ -20,7 +20,7 @@ header {
   border-bottom: 1px solid #64748b2f;
 }
 .main-logo {
-  height: 90px;
+  height: 48px;
 }
 
 .main-logo img {
@@ -782,4 +782,53 @@ footer .f-right li a {
 
 footer .f-right li a:hover {
   text-decoration: underline;
+}
+
+footer .main-logo {
+  margin-bottom: 18px;
+}
+
+@media (max-width: 1024px) {
+
+  .main-logo {
+    height: 40px;
+  }
+
+  .hero-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-apropos, .container-sec {
+    max-width: 900px;
+  }
+
+  .container-apropos .img-wraper {
+    height: 100%;
+  }
+
+  .container-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container-sec {
+    gap: 25px;
+    padding: 72px 0;
+  }
+
+  .container-form {
+    flex-direction: column;
+  }
+
+  .container-form .form-right {
+    width: 100%;
+    border-bottom-left-radius: 24px;
+  }
+
+  .container-form .form-left {
+    width: 100%;
+    border-top-right-radius: 24px;
+    border-bottom-left-radius: 0;
+  }
+
 }
