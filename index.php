@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +21,7 @@
     <link rel="stylesheet" href="./style/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div class="main-logo">
@@ -28,15 +30,24 @@
         <nav>
             <a href="#accueil" id="nav-link-home">Accueil</a>
             <a href="#apropos">A propos</a>
-            <a href="#realisations">Prestations</a>
-            <a href="#prestations">Réalisations</a>
+            <a href="#prestations">Prestations</a>
+            <a href="#realisations">Réalisations</a>
             <a href="#avis">Avis</a>
         </nav>
         <div class="tel-devis">
             <span class="tel"><i class="fa-solid fa-phone"></i>06 02 66 15 68</span>
             <a class="btn-devis" href="#devis">Demander un devis</a>
         </div>
+        <button id="btn-menu"><i class="fa-solid fa-bars"></i></button>
     </header>
+    <div class="nav-mobile">
+        <a href="#accueil" id="nav-link-home">Accueil</a>
+        <a href="#apropos">A propos</a>
+        <a href="#prestations">Prestations</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#avis">Avis</a>
+        <a class="btn-devis" href="#devis">Demander un devis</a>
+    </div>
     <main>
         <section id="accueil">
             <div class="hero-container">
@@ -100,16 +111,16 @@
             <p class="sec-desc">Nous vous accompagnons dans tous vos projets de rénovation et de décoration, en intérieur comme en extérieur.</p>
             <div class="container-card">
                 <?php
-                    $json = file_get_contents("./backend/data.json");
-                    $data = json_decode($json, true);
-                    foreach ($data["prestations"] as $service) {
+                $json = file_get_contents("./backend/data.json");
+                $data = json_decode($json, true);
+                foreach ($data["prestations"] as $service) {
                 ?>
                     <div class="card">
                         <img src="<?= $service["image"] ?>" alt="<?= $service["name"] ?>">
                         <div class="infos">
                             <h3><?= $service["name"] ?></h3>
                             <p><?= $service["desc"] ?></p>
-                            <a class="<?=$service["class"] ?>" href="#devis"><?= $service["lien"] ?></a>
+                            <a class="<?= $service["class"] ?>" href="#devis"><?= $service["lien"] ?></a>
                         </div>
                     </div>
                 <?php } ?>
@@ -129,7 +140,7 @@
                                 <div class="title">Protection & Nettoyage</div>
                                 <p class="desc">Vos meubles sont protégés et le chantier est nettoyé chaque soir.</p>
                             </div>
-        
+
                         </div>
                         <div class="info">
                             <div class="logo g">
@@ -139,7 +150,7 @@
                                 <div class="title">Respect des délais</div>
                                 <p class="desc">Nous nous engageons sur une date de fin de chantier stricte.</p>
                             </div>
-                            
+
                         </div>
                         <div class="info">
                             <div class="logo b">
@@ -149,8 +160,8 @@
                                 <div class="title">Peintures Ecologiques</div>
                                 <p class="desc">Utilisation de peintures sans solvants nocifs pour un air intérieur sain.</p>
                             </div>
-                            
-                            
+
+
                         </div>
                     </div>
                 </div>
@@ -168,14 +179,14 @@
             </div>
             <div class="container-slider">
                 <div class="sliders">
-                    <?php 
-                        foreach($data["realisations"] as $rea){
+                    <?php
+                    foreach ($data["realisations"] as $rea) {
                     ?>
                         <div class="slider">
-                            <img src="<?=$rea["image"] ?>" alt="Image travaux réalisé">
+                            <img src="<?= $rea["image"] ?>" alt="Image travaux réalisé">
                         </div>
                     <?php } ?>
-                    
+
                 </div>
                 <div class="btn-slider">
                     <button class="btn-previous" aria-label="bouton-precedant"><i class="fa-solid fa-angle-left"></i></button>
@@ -194,22 +205,22 @@
             </div>
             <p class="sec-desc">Note moyenne de 4.9/5 sur plus de 120 avis clients</p>
             <div class="container-card-avis">
-                <?php 
-                    $avis = $data["avis"];
-                    foreach($avis as $avi){?>
-                        <div class="card-avis">
-                            <div class="infos">
-                                <div class="img-avis">
-                                    <img src="<?= $avi["image"] ?>" alt="Photo personne déposant l'avis">
-                                </div>
-                                <div class="info">
-                                    <div class="avis-person"><?= $avi["name"] ?></div>
-                                    <div class="date-avis"><?= $avi["date"] ?></div>
-                                </div>
+                <?php
+                $avis = $data["avis"];
+                foreach ($avis as $avi) { ?>
+                    <div class="card-avis">
+                        <div class="infos">
+                            <div class="img-avis">
+                                <img src="<?= $avi["image"] ?>" alt="Photo personne déposant l'avis">
                             </div>
-                            <p><?= $avi["message"] ?></p>
+                            <div class="info">
+                                <div class="avis-person"><?= $avi["name"] ?></div>
+                                <div class="date-avis"><?= $avi["date"] ?></div>
+                            </div>
                         </div>
-                    <?php } ?>
+                        <p><?= $avi["message"] ?></p>
+                    </div>
+                <?php } ?>
             </div>
         </section>
         <section id="devis">
@@ -287,38 +298,38 @@
     <footer>
         <div class="footer-top">
             <div class="f-left">
-            <div class="main-logo">
-                <img src="./backend/images/logo-rec.webp" alt="logo entreprise">
+                <div class="main-logo">
+                    <img src="./backend/images/logo-rec.webp" alt="logo entreprise">
+                </div>
+                <div class="sec-desc">Votre artisan peintre de confiance pour tous vos projets de rénovation.</div>
             </div>
-            <div class="sec-desc">Votre artisan peintre de confiance pour tous vos projets de rénovation.</div>
-        </div>
-        <div class="f-right">
-            <div>
-                <h4>Services</h4>
-                <ul>
-                    <li>Peinture Intérieure</li>
-                    <li>Ravalement de façade</li>
-                    <li>Pose de papier peint</li>
-                    <li>Revêtements de sol</li>
-                </ul>
+            <div class="f-right">
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Peinture Intérieure</li>
+                        <li>Ravalement de façade</li>
+                        <li>Pose de papier peint</li>
+                        <li>Revêtements de sol</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>L'entreprise</h4>
+                    <ul>
+                        <li><a href="#realisations">Nos réalisations</a></li>
+                        <li><a href="#avis">Avis clients</a></li>
+                        <li><a href="#devis">Demander un devis</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>06 02 66 15 68</li>
+                        <li><a href="mailto:Glkolors.artisan@gmail.com">Glkolors.artisan@gmail.com</a></li>
+                        <li>47 chemin des fonts saladas</li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <h4>L'entreprise</h4>
-                <ul>
-                    <li><a href="#realisations">Nos réalisations</a></li>
-                    <li><a href="#avis">Avis clients</a></li>
-                    <li><a href="#devis">Demander un devis</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Contact</h4>
-                <ul>
-                    <li>06 02 66 15 68</li>
-                    <li><a href="mailto:Glkolors.artisan@gmail.com">Glkolors.artisan@gmail.com</a></li>
-                    <li>47 chemin des fonts saladas</li>
-                </ul>
-            </div>
-        </div>
         </div>
         <div class="footer-bottom">
             © 2026 Glkolors. Tous droits réservés.
@@ -327,4 +338,5 @@
     <script src="./script/main.js"></script>
     <script src="./script/carrousel.js"></script>
 </body>
+
 </html>

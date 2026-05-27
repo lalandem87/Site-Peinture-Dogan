@@ -28,10 +28,16 @@ header {
 .main-logo img {
   height: 100%;
 }
+
 nav {
   display: flex;
   align-items: center;
   gap: 32px;
+}
+
+.nav-mobile,
+#btn-menu {
+  display: none;
 }
 
 nav a {
@@ -344,7 +350,7 @@ h3 {
 
 #apropos-atelier,
 #apropos {
-  background-color: #f1f5f949;
+  background-color: #e0e0e049;
 }
 
 .container-sec {
@@ -735,7 +741,7 @@ footer {
   flex-direction: column;
   gap: 24px;
   padding: 48px 64px;
-  background-color: #0F172A;
+  background-color: #0f172a;
 }
 
 .footer-top {
@@ -798,24 +804,24 @@ footer .main-logo {
   margin-bottom: 18px;
 }
 
- .footer-bottom {
-    font-size: 12px;
-    color: #ffffff70;
-    text-align: center;
-  }
+.footer-bottom {
+  font-size: 12px;
+  color: #ffffff70;
+  text-align: center;
+}
 
 @media (max-width: 1024px) {
-
   .main-logo {
     height: 40px;
   }
 
-  .hero-container{
+  .hero-container {
     display: flex;
     flex-direction: column;
   }
 
-  .container-apropos, .container-sec {
+  .container-apropos,
+  .container-sec {
     max-width: 900px;
   }
 
@@ -846,12 +852,42 @@ footer .main-logo {
     border-top-right-radius: 24px;
     border-bottom-left-radius: 0;
   }
-
 }
 
 @media (max-width: 768px) {
   nav {
     display: none;
+  }
+
+  #btn-menu {
+    font-size: 16px;
+    display: flex;
+    border: 0;
+    background-color: transparent;
+  }
+
+  .nav-mobile.open {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 28px;
+    border-bottom: 1px solid #64748b40;
+  }
+
+  .nav-mobile.open a:not(:last-child) {
+    border-bottom: 1px solid #0f172a33;
+    padding-bottom: 12px;
+  }
+
+  .nav-mobile.open a:not(.btn-devis) {
+    text-decoration: none;
+    font-size: 14px;
+    color: #64748b;
+    font-weight: bold;
+  }
+
+  .btn-devis {
+    color: #fff;
   }
 
   header {
@@ -871,7 +907,7 @@ footer .main-logo {
   }
 
   .hero-left {
-    padding: 48px 24px 32px 24px;
+    padding: 32px 24px;
   }
 
   .hero-left a {
@@ -918,7 +954,11 @@ footer .main-logo {
     gap: 24px;
   }
 
-  #prestations, .container-sec, #realisations, #avis, #devis {
+  #prestations,
+  .container-sec,
+  #realisations,
+  #avis,
+  #devis {
     padding: 64px 24px;
   }
 
@@ -926,7 +966,8 @@ footer .main-logo {
     padding: 24px;
   }
 
-  .container-card, .container-card-avis {
+  .container-card,
+  .container-card-avis {
     grid-template-columns: 1fr;
     margin-top: 40px;
   }
@@ -957,7 +998,8 @@ footer .main-logo {
     gap: 6px;
   }
 
-  .container-form .form-left, .form-right {
+  .container-form .form-left,
+  .form-right {
     padding: 64px 24px;
   }
 
@@ -975,5 +1017,4 @@ footer .main-logo {
     flex-direction: column;
     gap: 24px;
   }
-
 }
