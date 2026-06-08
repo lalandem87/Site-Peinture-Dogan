@@ -2,6 +2,7 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
 
 require './PHPMailer/Exception.php';
 require './PHPMailer/PHPMailer.php';
@@ -19,10 +20,18 @@ $mail = new PHPMailer(true);
 
 try {
     $mail->isSMTP();
+    $mail->SMTPOptions = [
+    'ssl' => [
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+            'allow_self_signed' => true,
+        ]
+    ];
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
     $mail->Username   = 'Glkolors.artisan@gmail.com';
-    $mail->Password   = 'ton_app_password';
+    $env = parse_ini_file(__DIR__ . "/../.env");
+    $mail->Password = $env["SMTP_PASS"];
     $mail->SMTPSecure = 'tls';
     $mail->Port       = 587;
 

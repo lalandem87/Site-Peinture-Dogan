@@ -43,22 +43,34 @@
 
   "avis": [
     {
-      "image": "./backend/images/photos-avis/1.webp",
-      "name": "Sophie L.",
-      "date": "Il y a 2 semaines",
-      "message": "« Une équipe ponctuelle, très professionnelle et un résultat au-delà de mes espérances pour la rénovation de mon salon. Le chantier était impeccable tous les soirs. »"
+      "name": "Annaelle Lizot",
+      "date": "Il y a 1 an",
+      "note": 5,
+      "message": "Travail de finition parfaitement réalisé, Mr Galiskan est à l'écoute et m'a très bien conseillé pour le choix de la couleur, je recommande à 100%."
     },
     {
-      "image": "./backend/images/photos-avis/2.webp",
-      "name": "Marc D.",
-      "date": "Il y a 1 mois",
-      "message": "« Très bon artisan peintre. Les conseils sur le choix des teintes étaient pertinents et l'exécution parfaite. Je recommande vivement pour leur sérieux. »"
+      "name": "Morgane Cao",
+      "date": "Il y a 1 an",
+      "note": 5,
+      "message": "Monsieur Galiskan a su parfaitement répondre à mes attentes. Je recommande vivement pour vos travaux."
     },
     {
-      "image": "./backend/images/photos-avis/3.webp",
-      "name": "Leila K.",
-      "date": "Il y a 2 mois",
-      "message": "« J'ai fait appel à l'Atelier Couleurs pour la pose d'un papier peint panoramique. Travail très minutieux et soigné. Je suis ravie du résultat final ! »"
+      "name": "madrax 87",
+      "date": "Il y a 1 an",
+      "note": 5,
+      "message": "Très bonne prestation de la part de gl kolors merci."
+    },
+    {
+      "name": "Harun Aktay",
+      "date": "Il y a 1 an",
+      "note": 5,
+      "message": "Recommande à 100% !!!"
+    },
+    {
+      "name": "mouzze saaam",
+      "date": "Il y a 1 an",
+      "note": 5,
+      "message": "Pablo picasso 👌👌"
     }
   ]
 }

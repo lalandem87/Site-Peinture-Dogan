@@ -205,22 +205,37 @@
             </div>
             <p class="sec-desc">Note moyenne de 4.9/5 sur plus de 120 avis clients</p>
             <div class="container-card-avis">
-                <?php
-                $avis = $data["avis"];
-                foreach ($avis as $avi) { ?>
-                    <div class="card-avis">
-                        <div class="infos">
-                            <div class="img-avis">
-                                <img src="<?= $avi["image"] ?>" alt="Photo personne déposant l'avis">
+                <div class="avis-track">
+                    <?php
+                    $avis = $data["avis"];
+                    $index = 0;
+                    foreach ($avis as $avi) { ?>
+
+                        <div class="card-avis">
+                            <div class="infos">
+                                <div class="info">
+                                    <div class="avis-person"><?= $avi["name"] ?></div>
+                                    <div class="date-avis"><?= $avi["date"] ?></div>
+                                </div>
+                                <div class="stars">
+
+                                    <?php
+                                    for ($i = 1; $i <= 5; $i++) {
+                                        if ($i <= $avi["note"]) { ?>
+                                            <i class="fa-solid fa-star"></i>
+                                        <?php } else { ?>
+                                            <i class="fa-regular fa-star"></i>
+                                    <?php }
+                                    } ?>
+
+                                </div>
                             </div>
-                            <div class="info">
-                                <div class="avis-person"><?= $avi["name"] ?></div>
-                                <div class="date-avis"><?= $avi["date"] ?></div>
-                            </div>
+                            <p><?= $avi["message"] ?></p>
                         </div>
-                        <p><?= $avi["message"] ?></p>
-                    </div>
-                <?php } ?>
+
+
+                    <?php } ?>
+                </div>
             </div>
         </section>
         <section id="devis">

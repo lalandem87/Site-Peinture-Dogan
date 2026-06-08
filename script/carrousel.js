@@ -23,9 +23,19 @@ btnPrev.addEventListener("click", (e) => {
   }
 });
 
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   current = 0;
   slideWidth = sliders.querySelector(".slider").offsetWidth + 24;
   visible = window.innerWidth < 768 ? 1 : 3;
-  sliders.style.transform = 'translateX(0)';
+  sliders.style.transform = "translateX(0)";
 });
+
+const avisTrack = document.querySelector(".avis-track");
+let avisCurrent = 0;
+const avisTotal = document.querySelectorAll(".card-avis").length;
+const cardWidth = document.querySelector(".card-avis").offsetWidth;
+
+setInterval(() => {
+  avisCurrent = avisCurrent < avisTotal - 3 ? avisCurrent + 1 : 0;
+  avisTrack.style.transform = `translateX(-${avisCurrent * (cardWidth + 24)}px)`;
+}, 3000);
