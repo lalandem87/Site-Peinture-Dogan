@@ -347,7 +347,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            © 2026 Glkolors. Tous droits réservés.
+            © 2026 Glkolors. Tous droits réservés. &nbsp;|&nbsp;
+            <a href="mentions-legales.php" style="color: #ffffff70;">Mentions légales</a>
         </div>
     </footer>
     <script src="./script/main.js"></script>

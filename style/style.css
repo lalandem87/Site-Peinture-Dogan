@@ -782,7 +782,6 @@ h4 {
   font-weight: bold;
   margin-bottom: 20px;
   color: #ffffff7d;
-  text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
@@ -844,6 +843,14 @@ footer .main-logo {
   .container-sec {
     gap: 25px;
     padding: 72px 0;
+  }
+
+  #avis {
+    padding: 48px 65px;
+  }
+
+  .card-avis {
+    min-width: calc(50% - 12px);
   }
 
   .container-form {
@@ -970,14 +977,34 @@ footer .main-logo {
     padding: 64px 24px;
   }
 
+  #avis {
+    overflow: hidden;
+  }
+
   .container-card .card .infos {
     padding: 24px;
   }
 
-  .container-card,
-  .container-card-avis {
+  .avis-track {
+    width: 100%;
+    gap: 0;
+  }
+
+  .container-card {
     grid-template-columns: 1fr;
     margin-top: 40px;
+  }
+
+  .container-card-avis {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .container-card-avis .card-avis {
+    min-width: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    box-sizing: border-box;
   }
 
   .container-sec {
