@@ -14,12 +14,16 @@ body {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 24px 48px;
   height: 10vh;
   border-bottom: 1px solid #64748b2f;
+  background-color: #fff;
 }
 .main-logo {
   height: 48px;
@@ -63,9 +67,13 @@ header .tel-devis {
 }
 
 .tel {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   color: #00597c;
   font-size: 14px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .btn-devis {
@@ -811,10 +819,35 @@ footer .main-logo {
   margin-bottom: 18px;
 }
 
-.footer-bottom {
+.footer-bottom,
+.footer-bottom a {
   font-size: 12px;
-  color: #ffffff70;
+  color: #ffffffa2;
   text-align: center;
+  text-decoration: none;
+}
+
+.alert {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  border-radius: 16px;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.alert.success {
+  background-color: #10b9812f;
+  color: #10b981;
+  border: 1px solid #10b98155;
+}
+
+.alert.error {
+  background-color: #ef44442f;
+  color: #ef4444;
+  border: 1px solid #ef444455;
 }
 
 @media (max-width: 1024px) {

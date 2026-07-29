@@ -7,133 +7,9 @@
     <meta name="description" content="Mentions légales - GLKolors, artisan peintre à Limoges.">
     <title>Mentions Légales - GLKolors</title>
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="style/mentions-legales.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
     <style>
-        .mentions-hero {
-            background-color: #0f172a;
-            padding: 80px 48px;
-            text-align: center;
-        }
-
-        .mentions-hero h1 {
-            font-size: 48px;
-            color: #fff;
-            max-width: 100%;
-        }
-
-        .mentions-hero p {
-            color: #ffffff88;
-            margin-top: 16px;
-            font-size: 16px;
-        }
-
-        .mentions-container {
-            max-width: 860px;
-            margin: 0 auto;
-            padding: 80px 24px;
-            display: flex;
-            flex-direction: column;
-            gap: 48px;
-        }
-
-        .mentions-block {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .mentions-block h2 {
-            font-size: 22px;
-            font-weight: bold;
-            text-align: left;
-            margin-bottom: 0;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .mentions-block h2 .icon {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 15px;
-            flex-shrink: 0;
-        }
-
-        .icon.purple { background-color: #8a5cf622; color: #8b5cf6; }
-        .icon.amber  { background-color: #f59f0b2f; color: #f59e0b; }
-        .icon.green  { background-color: #10b9812f; color: #10b981; }
-        .icon.blue   { background-color: #0070ba22; color: #0070ba; }
-        .icon.pink   { background-color: #a2006c22; color: #a2006c; }
-        .icon.slate  { background-color: #64748b22; color: #64748b; }
-
-        .mentions-block p,
-        .mentions-block li {
-            font-size: 15px;
-            color: #64748b;
-            line-height: 28px;
-        }
-
-        .mentions-block ul {
-            padding-left: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .mentions-block a {
-            color: #0070ba;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .mentions-block a:hover {
-            text-decoration: underline;
-        }
-
-        .mentions-divider {
-            height: 1px;
-            background-color: #e2e8f0;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            font-weight: bold;
-            color: #fff;
-            text-decoration: none;
-            background-color: #0f172a;
-            padding: 12px 24px;
-            border-radius: 20px;
-            margin-top: 8px;
-            width: fit-content;
-            transition: all 0.2s ease;
-        }
-
-        .back-link:hover {
-            transform: scale(1.05);
-            background-color: #17274d;
-        }
-
-        @media (max-width: 768px) {
-            .mentions-hero {
-                padding: 60px 24px;
-            }
-
-            .mentions-hero h1 {
-                font-size: 32px;
-            }
-
-            .mentions-container {
-                padding: 48px 24px;
-                gap: 36px;
-            }
-        }
     </style>
 </head>
 
@@ -177,20 +53,16 @@
                     <span class="icon purple"><i class="fa-solid fa-building"></i></span>
                     Éditeur du site
                 </h2>
-                <p>
-                    Le présent site est édité par :<br><br>
-                    <strong>GLKolors</strong><br>
-                    Artisan peintre — Auto-entrepreneur<br>
-                    47 chemin des fonts saladas, 87100 Limoges<br>
-                    Téléphone : <a href="tel:0602661568">06 02 66 15 68</a><br>
-                    Email : <a href="mailto:Glkolors.artisan@gmail.com">Glkolors.artisan@gmail.com</a><br>
-                    SIRET : [Numéro SIRET]<br>
-                    N° TVA intracommunautaire : [N° TVA si applicable]
-                </p>
+                <ul>
+                    <li><strong>GLKolors</strong> — Artisan peintre SAS</li>
+                    <li>47 chemin des fonts saladas, 87100 Limoges</li>
+                    <li>Téléphone : <a href="tel:0602661568">06 02 66 15 68</a></li>
+                    <li>Email : <a href="mailto:Glkolors.artisan@gmail.com">Glkolors.artisan@gmail.com</a></li>
+                    <li>SIRET : [Numéro SIRET]</li>
+                    <li>N° TVA : [N° TVA si applicable]</li>
+                </ul>
             </div>
-
             <div class="mentions-divider"></div>
-
             <div class="mentions-block">
                 <h2>
                     <span class="icon amber"><i class="fa-solid fa-globe"></i></span>
@@ -198,9 +70,9 @@
                 </h2>
                 <p>
                     Ce site est hébergé par :<br><br>
-                    <strong>[Nom de l'hébergeur]</strong><br>
-                    [Adresse de l'hébergeur]<br>
-                    [Site web de l'hébergeur]
+                    <strong>OVH</strong><br>
+                    Cloud<br>
+                    https://www.ovhcloud.com/fr/
                 </p>
             </div>
 
@@ -332,8 +204,6 @@
             © <?= date('Y') ?> Glkolors. Tous droits réservés.
         </div>
     </footer>
-
-    <script src="./script/main.js"></script>
 </body>
 
 </html>

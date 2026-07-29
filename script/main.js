@@ -22,3 +22,8 @@ function SetNavMobile() {
 }
 
 SetNavMobile();
+
+if (window.location.search.includes("status")) {
+  document.getElementById("devis").scrollIntoView({ behavior: "smooth" });
+  history.replaceState(null, "", window.location.pathname);
+}

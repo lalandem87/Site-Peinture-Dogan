@@ -1,3 +1,7 @@
+<?php
+$status = $_GET["status"] ?? "";
+$errorMsg = $_GET["msg"] ?? "";
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -10,18 +14,30 @@
     <!-- Open Graph (partage Facebook/LinkedIn) -->
     <meta property="og:title" content="GL Kolors - Artisan Peintre">
     <meta property="og:description" content="Peinture intérieure, extérieure et décoration.">
-    <meta property="og:image" content="./backend/images/hero-image.webp">
-    <meta property="og:url" content="https://tonsite.fr">
+    <meta property="og:image" content="./backend/images/logo-rec.webp">
+    <meta property="og:url" content="https://www.glkolors.fr">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="GLKolors - Artisan Peintre">
     <meta name="twitter:description" content="Peinture intérieure, extérieure et décoration.">
     <title>Glkolors</title>
+    <link rel="icon" href="./backend/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./style/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18136404056"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
 
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18136404056');
+</script>
 <body>
     <header>
         <div class="main-logo">
@@ -35,7 +51,7 @@
             <a href="#avis">Avis</a>
         </nav>
         <div class="tel-devis">
-            <span class="tel"><i class="fa-solid fa-phone"></i>06 02 66 15 68</span>
+            <a href="tel:06 02 66 15 68" class="tel"><i class="fa-solid fa-phone"></i>06 02 66 15 68</a>
             <a class="btn-devis" href="#devis">Demander un devis</a>
         </div>
         <button id="btn-menu"><i class="fa-solid fa-bars"></i></button>
@@ -47,6 +63,7 @@
         <a href="#realisations">Réalisations</a>
         <a href="#avis">Avis</a>
         <a class="btn-devis" href="#devis">Demander un devis</a>
+        <a href="tel:06 02 66 15 68" class="tel"><i class="fa-solid fa-phone"></i>06 02 66 15 68</a>
     </div>
     <main>
         <section id="accueil">
@@ -275,7 +292,7 @@
                 </div>
                 <div class="form-right">
                     <h3>Demande de Devis Gratuit</h3>
-                    <form action="" method="post">
+                    <form action="./backend/send-mail.php" method="post">
                         <div class="rows">
                             <div class="row">
                                 <label for="name">Nom & Prénom</label>
@@ -294,9 +311,9 @@
                             <label for="type">Type de travaux</label>
                             <select name="type" id="type">
                                 <option value="">Sélectionnez une prestation</option>
-                                <option value="">Intérieur</option>
-                                <option value="">Extérieur</option>
-                                <option value="">Décoration</option>
+                                <option value="Interieur">Intérieur</option>
+                                <option value="Exterieur">Extérieur</option>
+                                <option value="Decoration">Décoration</option>
                             </select>
                         </div>
                         <div class="row">
@@ -304,6 +321,17 @@
                             <textarea name="msg" id="msg" placeholder="Décrivez brièvement les pièces à peindre, la surface approximative, l'état des murs..."></textarea>
                         </div>
                         <button type="submit">Envoyer ma demande</button>
+                        <?php if ($status === "success"): ?>
+                            <div class="alert success">
+                                <i class="fa-solid fa-circle-check"></i>
+                                Votre demande a bien été envoyée ! Nous vous recontacterons sous 48h.
+                            </div>
+                        <?php elseif ($status === "error"): ?>
+                            <div class="alert error">
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <?= htmlspecialchars($errorMsg) ?: "Une erreur est survenue. Veuillez réessayer ou nous contacter par téléphone." ?>
+                            </div>
+                        <?php endif; ?>
                         <p>Vos données sont protégées et ne seront utilisées que pour répondre à votre demande.</p>
                     </form>
                 </div>
@@ -339,7 +367,7 @@
                 <div>
                     <h4>Contact</h4>
                     <ul>
-                        <li>06 02 66 15 68</li>
+                        <li><a href="tel:06 02 66 15 68">06 02 66 15 68</a></li>
                         <li><a href="mailto:Glkolors.artisan@gmail.com">Glkolors.artisan@gmail.com</a></li>
                         <li>47 chemin des fonts saladas</li>
                     </ul>
@@ -348,7 +376,7 @@
         </div>
         <div class="footer-bottom">
             © 2026 Glkolors. Tous droits réservés. &nbsp;|&nbsp;
-            <a href="mentions-legales.php" style="color: #ffffff70;">Mentions légales</a>
+            <a href="mentions-legales.php">Mentions légales</a>
         </div>
     </footer>
     <script src="./script/main.js"></script>

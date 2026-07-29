@@ -1,0 +1,169 @@
+.mentions-hero {
+  background-color: #0f172a;
+  padding: 80px 48px;
+  text-align: center;
+}
+
+.mentions-hero h1 {
+  font-size: 48px;
+  color: #fff;
+  max-width: 100%;
+}
+
+.mentions-hero p {
+  color: #ffffff88;
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+.mentions-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.mentions-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mentions-block h2 {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mentions-block h2 .icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.mentions-block ul {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mentions-block li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mentions-block li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #e2e8f0;
+  flex-shrink: 0;
+}
+
+.mentions-block li a {
+  color: #0070ba;
+}
+
+.icon.purple {
+  background-color: #8a5cf622;
+  color: #8b5cf6;
+}
+.icon.amber {
+  background-color: #f59f0b2f;
+  color: #f59e0b;
+}
+.icon.green {
+  background-color: #10b9812f;
+  color: #10b981;
+}
+.icon.blue {
+  background-color: #0070ba22;
+  color: #0070ba;
+}
+.icon.pink {
+  background-color: #a2006c22;
+  color: #a2006c;
+}
+.icon.slate {
+  background-color: #64748b22;
+  color: #64748b;
+}
+
+.mentions-block p,
+.mentions-block li {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 28px;
+}
+
+.mentions-block ul {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mentions-block a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.mentions-block a:hover {
+  text-decoration: underline;
+}
+
+.mentions-divider {
+  height: 1px;
+  background-color: #e2e8f0;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  background-color: #0f172a;
+  padding: 12px 24px;
+  border-radius: 20px;
+  margin-top: 8px;
+  width: fit-content;
+  transition: all 0.2s ease;
+}
+
+.back-link:hover {
+  transform: scale(1.05);
+  background-color: #17274d;
+}
+
+@media (max-width: 768px) {
+  .mentions-hero {
+    padding: 60px 24px;
+  }
+
+  .mentions-hero h1 {
+    font-size: 32px;
+  }
+
+  .mentions-container {
+    padding: 48px 24px;
+    gap: 36px;
+  }
+}
