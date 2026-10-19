@@ -122,8 +122,8 @@ $errorMsg = $_GET["msg"] ?? "";
             </div>
         </section>
         <section id="prestations">
-            <h2>Nos Prestations</h2>
-            <p class="sec-desc">Nous vous accompagnons dans tous vos projets de rénovation et de décoration, en intérieur comme en extérieur.</p>
+            <h2>Nos prestations de peinture à Limoges</h2>
+            <p class="sec-desc">Particuliers ou professionnels, nous vous accompagnons dans vos projets de rénovation et de décoration, en intérieur comme en extérieur, à Limoges et dans ses alentours.</p>
             <div class="container-card">
                 <?php
                 $json = file_get_contents("./backend/data.json");
@@ -144,45 +144,49 @@ $errorMsg = $_GET["msg"] ?? "";
         <section id="apropos-atelier">
             <div class="container-sec">
                 <div class="sec-left">
-                    <div class="title">Pourquoi choisir Glkolors ?</div>
-                    <div class="desc">Forts de plus de 5 ans d'expérience, nous mettons un point d'honneur à réaliser des finitions impeccables tout en respectant vos lieux de vie.</div>
+                    <div class="badge">Pourquoi Glkolors</div>
+                    <h2>Un artisan qui vous conseille, du choix des couleurs aux finitions</h2>
+                    <div class="desc">Un seul interlocuteur du premier rendez-vous à la fin du chantier. On prend le temps de comprendre votre projet, de vous conseiller, puis de livrer un travail dont on est fier.</div>
                     <div class="infos">
-                        <div class="info">
-                            <div class="logo r">
-                                <i class="fa-solid fa-broom"></i>
+                        <?php foreach($data["engagements"] as $engagement){ ?>
+                            <div class="info">
+                                <i class="<?= htmlspecialchars($engagement["icon"]) ?>" aria-hidden="true"></i>
+                                <h3><?= htmlspecialchars($engagement["title"]) ?></h3>
+                                <p><?= htmlspecialchars($engagement["desc"]) ?></p>
                             </div>
-                            <div>
-                                <div class="title">Protection & Nettoyage</div>
-                                <p class="desc">Vos meubles sont protégés et le chantier est nettoyé chaque soir.</p>
-                            </div>
-
-                        </div>
-                        <div class="info">
-                            <div class="logo g">
-                                <i class="fa-regular fa-clock"></i>
-                            </div>
-                            <div>
-                                <div class="title">Respect des délais</div>
-                                <p class="desc">Nous nous engageons sur une date de fin de chantier stricte.</p>
-                            </div>
-
-                        </div>
-                        <div class="info">
-                            <div class="logo b">
-                                <i class="fa-solid fa-leaf"></i>
-                            </div>
-                            <div>
-                                <div class="title">Peintures Ecologiques</div>
-                                <p class="desc">Utilisation de peintures sans solvants nocifs pour un air intérieur sain.</p>
-                            </div>
-
-
-                        </div>
+                       <?php } ?>
                     </div>
                 </div>
                 <div class="sec-right">
                     <div class="img-wraper">
                         <img src="./backend/images/apropos-atelier.webp" alt="">
+                        <?php 
+                        $bestReview = [
+                            [
+                                "note" => 0,
+                                "message" => ""
+                            ]
+                        ];
+                        foreach($data["avis"] as $review){
+                            if($review["note"] > $bestReview["note"] && strlen($review["message"]) > strlen($bestReview["message"])){
+                                $bestReview = $review;
+                            }
+                        }
+                        ?>
+                        <div class="avis">
+                            <div class="stars">
+                                <?php 
+                                for($i = 0; $i < $bestReview["note"]; $i++){
+                                    if($i <= $bestReview["note"]){?>
+                                        <i class="fa-solid fa-star"></i>
+                                <?php }else{?>
+                                        <i class="fa-regular fa-star"></i>
+                                <?php } ?>
+                            <?php } ?>
+                            </div>
+                            <p>« <?= $bestReview["message"] ?> »</p>
+                            <span><?= $bestReview["name"] ?> . avis Google</span>
+                        </div>
                     </div>
                 </div>
             </div>

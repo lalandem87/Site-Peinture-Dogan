@@ -3,23 +3,46 @@
     {
       "name": "Peinture Intérieure",
       "image": "./backend/images/interieur.webp",
-      "desc": "Mise en peinture de vos murs, plafonds et boiseries avec des finitions mates, velours ou satinées de haute qualité.",
-      "lien": "En savoir plus<i class='fa-solid fa-arrow-right'></i>",
+      "desc": "Mise en peinture de vos murs, plafonds et boiseries, en finition mate, velours ou satinée. Chaque chantier commence par une préparation soignée des supports (rebouchage, ponçage, sous-couche) pour un rendu net et durable. Vos meubles sont protégés et la pièce est nettoyée chaque soir.",
+      "lien": "Demander un devis intérieur<i class='fa-solid fa-arrow-right'></i>",
       "class": "a"
     },
     {
       "name": "Façades & Extérieurs",
       "image": "./backend/images/exterieur.webp",
-      "desc": "Ravalement de façade, traitement anti-mousse, et peinture de vos menuiseries extérieures (volets, portails).",
-      "lien": "En savoir plus<i class='fa-solid fa-arrow-right'></i>",
+      "desc": "Ravalement de façade, traitement anti-mousse et remise en peinture de vos menuiseries extérieures : volets, portails, portes. Nous préparons et protégeons chaque support pour qu'il résiste durablement aux intempéries.",
+      "lien": "Demander un devis extérieur<i class='fa-solid fa-arrow-right'></i>",
       "class": "b"
     },
     {
       "name": "Décoration & Revêtements",
       "image": "./backend/images/decoration.webp",
-      "desc": "Pose de papiers peints panoramiques, toiles de verre, et application d'enduits décoratifs (stuc, béton ciré).",
-      "lien": "En savoir plus<i class='fa-solid fa-arrow-right'></i>",
+      "desc": "Pose de papiers peints panoramiques et de toiles de verre, application d'enduits décoratifs comme le stuc ou le béton ciré. Des finitions sur mesure pour donner du caractère à votre intérieur.",
+      "lien": "Demander un devis décoration<i class='fa-solid fa-arrow-right'></i>",
       "class": "c"
+    }
+  ],
+
+  "engagements": [
+    {
+      "icon": "fa-solid fa-palette",
+      "title": "Conseil couleurs et finitions",
+      "desc": "Mat ou velours, teinte chaude ou froide : on vous aide à choisir selon la lumière et l’usage de la pièce."
+    },
+    {
+      "icon": "fa-regular fa-user",
+      "title": "Un interlocuteur unique",
+      "desc": "L’artisan qui établit votre devis réalise vos travaux. Pas d’intermédiaire, pas de surprise."
+    },
+    {
+      "icon": "fa-regular fa-calendar-check",
+      "title": "Chantier propre, date tenue",
+      "desc": "Meubles et sols protégés, nettoyage chaque soir, date de fin fixée dès le devis."
+    },
+    {
+      "icon": "fa-solid fa-shield-halved",
+      "title": "Garantie décennale",
+      "desc": "Tous nos travaux sont couverts par une assurance décennale."
     }
   ],
 
