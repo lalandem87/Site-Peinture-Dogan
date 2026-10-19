@@ -1,5 +1,5 @@
 <?php
-$status = $_GET["status"] ?? "";
+$status   = $_GET["status"] ?? "";
 $errorMsg = $_GET["msg"] ?? "";
 ?>
 <!DOCTYPE html>
@@ -38,6 +38,7 @@ $errorMsg = $_GET["msg"] ?? "";
 
     gtag('config', 'AW-18136404056');
 </script>
+
 <body>
     <header>
         <div class="main-logo">
@@ -70,15 +71,12 @@ $errorMsg = $_GET["msg"] ?? "";
             <div class="hero-container">
                 <div class="hero-left">
                     <h1>
-                        L'art de peindre vos espaces, avec
-                        <em class="passion">passion</em> et
-                        <em class="precision">précision</em>.
+                        Peintre en bâtiment à Limoges : <em class="p-int">peinture intérieure</em> et <em class="p-ext">extérieure</em>
                     </h1>
                     <p class="hero-desc">
-                        Interventions rapides, chantiers propres et conseils
-                        couleurs personnalisés pour les particuliers et les professionnels.
+                        Artisan peintre en bâtiment à Limoges, GLKOLORS réalise vos travaux de peinture intérieure et extérieure pour particuliers et professionnels. Nous intervenons à Limoges et ses alentours pour vos projets de rénovation, décoration et remise en peinture.
                     </p>
-                    <a href="#devis">Parler de mon projet <i class="fa-solid fa-angle-right"></i></a>
+                    <!-- <a href="#devis">Parler de mon projet <i class="fa-solid fa-angle-right"></i></a> -->
                     <div class="services">
                         <div class="service">
                             <div class="chiffre">5+</div>
@@ -133,11 +131,11 @@ $errorMsg = $_GET["msg"] ?? "";
                 foreach ($data["prestations"] as $service) {
                 ?>
                     <div class="card">
-                        <img src="<?= $service["image"] ?>" alt="<?= $service["name"] ?>">
+                        <img src="<?php echo $service["image"] ?>" alt="<?php echo $service["name"] ?>">
                         <div class="infos">
-                            <h3><?= $service["name"] ?></h3>
-                            <p><?= $service["desc"] ?></p>
-                            <a class="<?= $service["class"] ?>" href="#devis"><?= $service["lien"] ?></a>
+                            <h3><?php echo $service["name"] ?></h3>
+                            <p><?php echo $service["desc"] ?></p>
+                            <a class="<?php echo $service["class"] ?>" href="#devis"><?php echo $service["lien"] ?></a>
                         </div>
                     </div>
                 <?php } ?>
@@ -200,7 +198,7 @@ $errorMsg = $_GET["msg"] ?? "";
                     foreach ($data["realisations"] as $rea) {
                     ?>
                         <div class="slider">
-                            <img src="<?= $rea["image"] ?>" alt="Image travaux réalisé">
+                            <img src="<?php echo $rea["image"] ?>" alt="Image travaux réalisé">
                         </div>
                     <?php } ?>
 
@@ -224,15 +222,15 @@ $errorMsg = $_GET["msg"] ?? "";
             <div class="container-card-avis">
                 <div class="avis-track">
                     <?php
-                    $avis = $data["avis"];
+                    $avis  = $data["avis"];
                     $index = 0;
                     foreach ($avis as $avi) { ?>
 
                         <div class="card-avis">
                             <div class="infos">
                                 <div class="info">
-                                    <div class="avis-person"><?= $avi["name"] ?></div>
-                                    <div class="date-avis"><?= $avi["date"] ?></div>
+                                    <div class="avis-person"><?php echo $avi["name"] ?></div>
+                                    <div class="date-avis"><?php echo $avi["date"] ?></div>
                                 </div>
                                 <div class="stars">
 
@@ -247,7 +245,7 @@ $errorMsg = $_GET["msg"] ?? "";
 
                                 </div>
                             </div>
-                            <p><?= $avi["message"] ?></p>
+                            <p><?php echo $avi["message"] ?></p>
                         </div>
 
 
@@ -329,7 +327,7 @@ $errorMsg = $_GET["msg"] ?? "";
                         <?php elseif ($status === "error"): ?>
                             <div class="alert error">
                                 <i class="fa-solid fa-circle-exclamation"></i>
-                                <?= htmlspecialchars($errorMsg) ?: "Une erreur est survenue. Veuillez réessayer ou nous contacter par téléphone." ?>
+                                <?php echo htmlspecialchars($errorMsg) ?: "Une erreur est survenue. Veuillez réessayer ou nous contacter par téléphone." ?>
                             </div>
                         <?php endif; ?>
                         <p>Vos données sont protégées et ne seront utilisées que pour répondre à votre demande.</p>
