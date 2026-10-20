@@ -25,24 +25,23 @@ btnPrev.addEventListener("click", (e) => {
 
 // AVIS
 const avisTrack = document.querySelector(".avis-track");
-let avisCurrent = 0;
-let avisVisible =
-  window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
 const avisTotal = document.querySelectorAll(".card-avis").length;
+let avisCurrent = 0;
+
+function getAvisVisible() {
+  return window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+}
 
 function getCardWidth() {
   const card = document.querySelector(".card-avis");
-  const isMobile = window.innerWidth < 768;
-  const gap = isMobile ? 0 : parseFloat(getComputedStyle(avisTrack).gap);
+  const gap = parseFloat(getComputedStyle(avisTrack).gap) || 0;
   return card.getBoundingClientRect().width + gap;
 }
 
-let cardWidth = getCardWidth();
-
 setInterval(() => {
-  cardWidth = getCardWidth();
-  avisCurrent = avisCurrent < avisTotal - avisVisible ? avisCurrent + 1 : 0;
-  avisTrack.style.transform = `translateX(-${avisCurrent * cardWidth}px)`;
+  avisCurrent =
+    avisCurrent < avisTotal - getAvisVisible() ? avisCurrent + 1 : 0;
+  avisTrack.style.transform = `translateX(-${avisCurrent * getCardWidth()}px)`;
 }, 3000);
 
 window.addEventListener("resize", () => {
@@ -52,7 +51,5 @@ window.addEventListener("resize", () => {
   sliders.style.transform = "translateX(0)";
 
   avisCurrent = 0;
-  cardWidth = getCardWidth();
-  avisVisible = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
   avisTrack.style.transform = "translateX(0)";
 });

@@ -538,6 +538,7 @@ h3 {
 
 .stars {
   display: flex;
+  gap: 4px;
   justify-content: center;
   align-items: center;
   margin-bottom: 15px;
@@ -548,33 +549,49 @@ h3 {
   color: #f59e0b;
 }
 
+#avis .sec-desc em {
+  font-weight: bold;
+}
+
 .container-card-avis {
-  display: flex;
-  gap: 24px;
-  margin-top: 64px;
+  margin-top: 48px;
   overflow: hidden;
 }
 
 .avis-track {
   display: flex;
   gap: 24px;
+  width: 100%;
   transition: transform 0.5s ease;
 }
 
 .container-card-avis .card-avis {
-  min-width: calc(33.33% - 16px);
-  flex-shrink: 0;
+  box-sizing: border-box;
+  flex: 0 0 calc((100% - 2 * 24px) / 3);
+  display: flex;
   border: 1px solid #e2e8f0;
   border-radius: 24px;
   padding: 32px;
-  background-color: #f1f5f938;
+  background-color: #f7f7f6;
+}
+
+.container-card-avis .card-avis .stars {
+  font-size: 14px;
+  justify-content: flex-start;
 }
 
 .container-card-avis .card-avis .infos {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
+  flex-direction: column;
+}
+
+.container-card-avis .card-avis .infos .info {
+  margin-top: 20px;
+}
+
+.container-card-avis .card-avis .infos .info span {
+  font-size: 13px;
+  color: #5b5f66;
 }
 
 .container-card-avis .card-avis .avis-person {
@@ -588,8 +605,32 @@ h3 {
 }
 
 .container-card-avis .card-avis p {
+  flex: 1;
   max-width: 340px;
-  color: #64748b;
+  color: #15171a;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+}
+
+.buttons .btn-avis-google {
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  border: 2px solid;
+  border-radius: 32px;
+  text-decoration: none;
+  padding: 15px 26px;
+}
+
+.buttons .btn-add-avis {
+  color: #1a5fa0;
 }
 
 /* DEVIS */

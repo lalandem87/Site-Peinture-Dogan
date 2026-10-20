@@ -148,41 +148,41 @@ $errorMsg = $_GET["msg"] ?? "";
                     <h2>Un artisan qui vous conseille, du choix des couleurs aux finitions</h2>
                     <div class="desc">Un seul interlocuteur du premier rendez-vous à la fin du chantier. On prend le temps de comprendre votre projet, de vous conseiller, puis de livrer un travail dont on est fier.</div>
                     <div class="infos">
-                        <?php foreach($data["engagements"] as $engagement){ ?>
+                        <?php foreach ($data["engagements"] as $engagement) { ?>
                             <div class="info">
                                 <i class="<?= htmlspecialchars($engagement["icon"]) ?>" aria-hidden="true"></i>
                                 <h3><?= htmlspecialchars($engagement["title"]) ?></h3>
                                 <p><?= htmlspecialchars($engagement["desc"]) ?></p>
                             </div>
-                       <?php } ?>
+                        <?php } ?>
                     </div>
                 </div>
                 <div class="sec-right">
                     <div class="img-wraper">
                         <img src="./backend/images/apropos-atelier.webp" alt="">
-                        <?php 
+                        <?php
                         $bestReview = [
                             [
                                 "note" => 0,
                                 "message" => ""
                             ]
                         ];
-                        foreach($data["avis"] as $review){
-                            if($review["note"] > $bestReview["note"] && strlen($review["message"]) > strlen($bestReview["message"])){
+                        foreach ($data["avis"] as $review) {
+                            if ($review["note"] > $bestReview["note"] && strlen($review["message"]) > strlen($bestReview["message"])) {
                                 $bestReview = $review;
                             }
                         }
                         ?>
                         <div class="avis">
                             <div class="stars">
-                                <?php 
-                                for($i = 0; $i < $bestReview["note"]; $i++){
-                                    if($i <= $bestReview["note"]){?>
+                                <?php
+                                for ($i = 0; $i < $bestReview["note"]; $i++) {
+                                    if ($i <= $bestReview["note"]) { ?>
                                         <i class="fa-solid fa-star"></i>
-                                <?php }else{?>
+                                    <?php } else { ?>
                                         <i class="fa-regular fa-star"></i>
+                                    <?php } ?>
                                 <?php } ?>
-                            <?php } ?>
                             </div>
                             <p>« <?= $bestReview["message"] ?> »</p>
                             <span><?= $bestReview["name"] ?> . avis Google</span>
@@ -192,7 +192,7 @@ $errorMsg = $_GET["msg"] ?? "";
             </div>
         </section>
         <section id="realisations">
-            <h2>Dernières Réalisations</h2>
+            <h2>Nos réalisations à Limoges</h2>
             <div>
                 <div class="sec-desc">Découvrez la qualité de nos finitions à travers nos récents chantiers.</div>
             </div>
@@ -216,28 +216,29 @@ $errorMsg = $_GET["msg"] ?? "";
         <section id="avis">
             <h2>Avis Clients</h2>
             <div class="stars">
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
+                <?php
+                $avisStats = $data["avis-googles"];
+                $reviewRating = $avisStats["note"];
+
+                for ($i = 0; $i < $reviewRating; $i++) {
+                    if ($i <= $reviewRating) { ?>
+                        <i class="fa-solid fa-star"></i>
+                    <?php } else { ?>
+                        <i class="fa-regular fa-star"></i>
+                    <?php } ?>
+                <?php } ?>
+
             </div>
-            <p class="sec-desc">Note moyenne de 4.9/5 sur plus de 120 avis clients</p>
+            <p class="sec-desc"><em><?= $reviewRating ?>/5</em> sur <?= $avisStats["total"] ?> avis Google</p>
             <div class="container-card-avis">
                 <div class="avis-track">
                     <?php
                     $avis  = $data["avis"];
                     $index = 0;
                     foreach ($avis as $avi) { ?>
-
                         <div class="card-avis">
                             <div class="infos">
-                                <div class="info">
-                                    <div class="avis-person"><?php echo $avi["name"] ?></div>
-                                    <div class="date-avis"><?php echo $avi["date"] ?></div>
-                                </div>
                                 <div class="stars">
-
                                     <?php
                                     for ($i = 1; $i <= 5; $i++) {
                                         if ($i <= $avi["note"]) { ?>
@@ -246,15 +247,20 @@ $errorMsg = $_GET["msg"] ?? "";
                                             <i class="fa-regular fa-star"></i>
                                     <?php }
                                     } ?>
-
+                                </div>
+                                <p>« <?php echo $avi["message"] ?> »</p>
+                                <div class="info">
+                                    <div class="avis-person"><?php echo $avi["name"] ?></div>
+                                    <span>Avis de Google</span>
                                 </div>
                             </div>
-                            <p><?php echo $avi["message"] ?></p>
                         </div>
-
-
                     <?php } ?>
                 </div>
+            </div>
+            <div class="buttons">
+                <a class="btn-avis-google" href="<?= $avisStats["lien"] ?>" target="_blank">Voir les <?= $avisStats["total"] ?> avis sur Google <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <a class="btn-add-avis" href="<?= $avisStats["lien"] ?>" target="_blank">Vous êtes client ? Laissez-nous un avis</a>
             </div>
         </section>
         <section id="devis">

@@ -64,6 +64,12 @@
     }
   ],
 
+  "avis-googles": {
+    "note": 5,
+    "total": 14,
+    "lien": "https://www.google.com/search?nfpr=1&sxsrf=APpeQnthsZEhiD8uE1gMObjs0N6nFaGA5Q:1792431508311&q=glkolors&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_w_X4RwZkYD7ZwySv43RDLiT657nTX8s0Zaoi-tn8CbgpqzWOEZCJZ43jB5Wbojp9PVk5fI%3D&uds=AJ5uw1-CsN_VmOWvV4nQCD6b3IOKcUa_2Q9bxY2tv0Zoow-IckQ7fb_YNgC8-gpBs2db54drMiNBNa7XT6VGPCbGURVIVxIRpD55FEUN7oVDEINCL6HOG9I"
+  },
+
   "avis": [
     {
       "name": "Annaelle Lizot",
@@ -72,28 +78,40 @@
       "message": "Travail de finition parfaitement réalisé, Mr Galiskan est à l'écoute et m'a très bien conseillé pour le choix de la couleur, je recommande à 100%."
     },
     {
+      "name": "Tls 974",
+      "date": "Il y a 1 an",
+      "note": 5,
+      "message": "Je suis extrêmement satisfait des travaux réalisés chez moi. La peinture a été faite avec beaucoup de soin, le résultat est net et les finitions sont vraiment excellentes. L'artisan a été sérieux, professionnel, ponctuel et à l'écoute. Le chantier a été laissé propre une fois les travaux terminés. Je le recommande vivement et ferai appel à ses services sans hésiter si besoin !"
+    },
+    {
       "name": "Morgane Cao",
       "date": "Il y a 1 an",
       "note": 5,
       "message": "Monsieur Galiskan a su parfaitement répondre à mes attentes. Je recommande vivement pour vos travaux."
     },
     {
-      "name": "madrax 87",
+      "name": "BE comm'",
       "date": "Il y a 1 an",
       "note": 5,
-      "message": "Très bonne prestation de la part de gl kolors merci."
+      "message": "Très satisfait des travaux réalisés ! Un peintre sérieux, professionnel et minutieux. Le travail est propre, les finitions sont impeccables et le chantier a été terminé dans les délais. Je recommande vivement ce peintre à Limoges pour la qualité de son travail et son professionnalisme."
     },
     {
-      "name": "Harun Aktay",
+      "name": "Dilhan_87",
       "date": "Il y a 1 an",
       "note": 5,
-      "message": "Recommande à 100% !!!"
+      "message": "Un grand merci pour la qualité du travail accompli. Les finitions sont parfaites, les protections ont été très bien posées et le chantier a été rendu d'une propreté exemplaire à la fin des travaux."
     },
     {
-      "name": "mouzze saaam",
+      "name": "Krsh Trk",
       "date": "Il y a 1 an",
       "note": 5,
-      "message": "Pablo picasso 👌👌"
+      "message": "Très satisfait du travail réalisé. Travail propre, soigné et de grande qualité. Personne sérieuse, professionnelle et à l’écoute. Je recommande à 100 % !"
+    },
+    {
+      "name": "Sandra Coulaudou",
+      "date": "Il y a 1 an",
+      "note": 5,
+      "message": "Équipe sérieuse avec beaucoup de professionnalisme, de patience et à l'écoute des besoins de leurs clients. Très bonne qualité de travail, rapidité et efficacité. Encore merci à vous 🙏"
     }
   ]
 }
