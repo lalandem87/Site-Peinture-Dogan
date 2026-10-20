@@ -266,35 +266,31 @@ $errorMsg = $_GET["msg"] ?? "";
         <section id="devis">
             <div class="container-form">
                 <div class="form-left">
-                    <h2>Parlez-nous de votre projet</h2>
-                    <p class="sec-desc">Remplissez ce formulaire pour obtenir un devis gratuit. Notre équipe vous recontactera sous 48h avec une proposition adaptée.</p>
-                    <div class="infos">
-                        <div class="info">
-                            <div class="logo x">
+                    <div class="top">
+                        <h2>Un projet de peinture ? Parlons-en.</h2>
+                        <p class="sec-desc">Laissez simplement votre numéro pour être rappelé, ou décrivez votre projet pour recevoir un devis détaillé.</p>
+                        <div class="container-appel">
+                            <div class="icon">
                                 <i class="fa-solid fa-phone"></i>
                             </div>
-                            <div class="details">
-                                <div>Appelez-nous</div>
-                                <p>06 02 66 15 68</p>
+                            <div class="label">
+                                <span>Ou appelez directement</span>
+                                <a href="tel:06 02 66 15 68">06 02 66 15 68</a>
                             </div>
                         </div>
-                        <div class="info">
-                            <div class="logo y">
-                                <i class="fa-regular fa-envelope"></i>
-                            </div>
-                            <div class="details">
-                                <div>Ecrivez-nous</div>
-                                <p>Glkolors.artisan@gmail.com</p>
-                            </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="container-info">
+                            <i class="fa-solid fa-check"></i>
+                            Devis gratuit et sans engagement
                         </div>
-                        <div class="info">
-                            <div class="logo z">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <div class="details">
-                                <div>Notre Atelier</div>
-                                <p>47 chemins des fonts saladas, 87100 Limoges</p>
-                            </div>
+                        <div class="container-info">
+                            <i class="fa-solid fa-check"></i>
+                            Réponse sous 48h
+                        </div>
+                        <div class="container-info">
+                            <i class="fa-solid fa-check"></i>
+                            Limoges et alentours
                         </div>
                     </div>
                 </div>
