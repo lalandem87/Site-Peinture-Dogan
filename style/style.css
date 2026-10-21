@@ -971,6 +971,7 @@ footer .main-logo {
   }
 
   .hero-container {
+    max-height: 100%;
     display: flex;
     flex-direction: column;
   }
@@ -988,6 +989,17 @@ footer .main-logo {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  #apropos-atelier .container-sec {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  #apropos-atelier .container-sec .sec-right .img-wraper .avis {
+    left: -20px;
+    bottom: -30px;
+  }
+
   .container-sec {
     gap: 25px;
     padding: 72px 0;
@@ -1001,19 +1013,19 @@ footer .main-logo {
     min-width: calc(50% - 12px);
   }
 
+  #devis {
+    padding: 72px 40px;
+  }
+
   .container-form {
+    display: flex;
     flex-direction: column;
+    gap: 48px;
   }
 
-  .container-form .form-right {
-    width: 100%;
-    border-bottom-left-radius: 24px;
-  }
-
-  .container-form .form-left {
-    width: 100%;
-    border-top-right-radius: 24px;
-    border-bottom-left-radius: 0;
+  #zone-intervention {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
