@@ -341,6 +341,48 @@ $errorMsg = $_GET["msg"] ?? "";
                 </div>
             </div>
         </section>
+        <section id="zone-intervention">
+            <div class="container-left">
+                <div class="zone-schema">
+                    <svg viewBox="0 0 440 440" role="img" aria-labelledby="zone-titre">
+                        <title id="zone-titre">Zone d'intervention autour de Limoges</title>
+
+                        <circle cx="220" cy="220" r="205" class="zs-fond" />
+                        <circle cx="220" cy="220" r="150" class="zs-rayon" />
+                        <circle cx="220" cy="220" r="80" class="zs-rayon" />
+
+                        <g class="zs-points">
+                            <circle cx="360" cy="215" r="6" />
+                            <circle cx="325" cy="128" r="6" />
+                            <circle cx="112" cy="120" r="6" />
+                            <circle cx="110" cy="318" r="6" />
+                            <circle cx="196" cy="370" r="6" />
+                            <circle cx="326" cy="314" r="6" />
+                        </g>
+
+                        <g class="zs-communes" text-anchor="middle">
+                            <text x="360" y="242">Panazol</text>
+                            <text x="325" y="110">Le Palais-sur-Vienne</text>
+                            <text x="112" y="102">Couzeix</text>
+                            <text x="110" y="345">Isle</text>
+                            <text x="196" y="397">Condat-sur-Vienne</text>
+                            <text x="326" y="341">Feytiat</text>
+                        </g>
+
+                        <circle cx="220" cy="220" r="30" class="zs-halo" />
+                        <circle cx="220" cy="220" r="11" class="zs-centre" />
+                        <text x="220" y="262" text-anchor="middle" class="zs-limoges">Limoges</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="container-right">
+                <span class="badge">Zone d'intervention</span>
+                <h2>Peintre en bâtiment à Limoges et alentours</h2>
+                <p>GLKOLORS intervient chez les particuliers et les professionnels à Limoges et dans les communes voisines : Panazol, Isle, Couzeix, Feytiat, Le Palais-sur-Vienne, Condat-sur-Vienne…</p>
+                <p>Murs et plafonds, façades, boiseries et menuiseries, papiers peints et enduits décoratifs : chaque chantier commence par une préparation soignée des supports, pour des finitions qui durent.</p>
+                <p>Votre commune n’est pas citée ? <a href="#devis">Contactez-nous</a>, nous étudions chaque demande.</p>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="footer-top">
@@ -373,7 +415,7 @@ $errorMsg = $_GET["msg"] ?? "";
                     <ul>
                         <li><a href="tel:06 02 66 15 68">06 02 66 15 68</a></li>
                         <li><a href="mailto:Glkolors.artisan@gmail.com">Glkolors.artisan@gmail.com</a></li>
-                        <li>47 chemin des fonts saladas</li>
+                        <li>47 chemins des fonts saladas</li>
                     </ul>
                 </div>
             </div>

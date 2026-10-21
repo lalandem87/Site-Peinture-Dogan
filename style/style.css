@@ -793,6 +793,78 @@ form p {
   margin: 0 auto;
 }
 
+/* ZONE D'INTERVENTION */
+
+#zone-intervention {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 52px;
+  padding: 96px 80px;
+}
+
+.container-left .zone-schema svg {
+  width: 100%;
+  max-width: 100%;
+  height: 500px;
+  font-family: inherit;
+}
+.zs-fond {
+  fill: #f7f7f6;
+}
+.zs-rayon {
+  fill: none;
+  stroke: #dcdfe4;
+  stroke-dasharray: 4 6;
+}
+.zs-points {
+  fill: #1a5fa0;
+}
+.zs-communes {
+  font-size: 14px;
+  font-weight: 500;
+  fill: #33373e;
+}
+.zs-halo {
+  fill: #1a5fa0;
+  opacity: 0.12;
+}
+.zs-centre {
+  fill: #15171a;
+}
+.zs-limoges {
+  font-size: 17px;
+  font-weight: 700;
+  fill: #15171a;
+}
+
+.container-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container-right span {
+  color: #1a5fa0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.container-right h2 {
+  text-align: start;
+}
+
+.container-right p {
+  line-height: 30px;
+  color: #4a4f57;
+  font-weight: 500;
+}
+
+.container-right p a {
+  color: #1a5fa0;
+  text-decoration: none;
+}
+
 /* FOOTER */
 
 footer {
